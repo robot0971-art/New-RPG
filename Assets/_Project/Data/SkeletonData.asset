@@ -21,3 +21,6 @@ MonoBehaviour:
   expReward: 8
   goldReward: 15
   spawnWeight: 1
+  spawnYOffset: -0.4
+  spawnZOffset: 0
+  spawnRotation: {x: 0, y: 180, z: 0}

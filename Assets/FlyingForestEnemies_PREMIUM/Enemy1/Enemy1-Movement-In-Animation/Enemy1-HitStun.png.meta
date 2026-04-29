@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: e3bea77569f5c324fbca13fd645e10c5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7681542948238388483
+    second: Enemy1-HitStun_0
+  - first:
+      213: 7294166476068593193
+    second: Enemy1-HitStun_1
+  - first:
+      213: 4224541533302631068
+    second: Enemy1-HitStun_2
+  - first:
+      213: 1339009603011870941
+    second: Enemy1-HitStun_3
+  - first:
+      213: 4583052527011096524
+    second: Enemy1-HitStun_4
+  - first:
+      213: 2993907531327854420
+    second: Enemy1-HitStun_5
+  - first:
+      213: 494234942132978041
+    second: Enemy1-HitStun_6
+  - first:
+      213: 6049985512417848991
+    second: Enemy1-HitStun_7
+  - first:
+      213: -1201728200530070613
+    second: Enemy1-HitStun_8
+  - first:
+      213: 2745956169573081389
+    second: Enemy1-HitStun_9
+  - first:
+      213: -2754647614354798032
+    second: Enemy1-HitStun_10
+  - first:
+      213: -7839832065202047456
+    second: Enemy1-HitStun_11
+  - first:
+      213: -5051415214106619578
+    second: Enemy1-HitStun_12
+  - first:
+      213: -8972124614302762231
+    second: Enemy1-HitStun_13
+  - first:
+      213: -3715034265613205835
+    second: Enemy1-HitStun_14
+  - first:
+      213: -548291262984089562
+    second: Enemy1-HitStun_15
+  - first:
+      213: -6784236263523182466
+    second: Enemy1-HitStun_16
+  - first:
+      213: 1502421558139006846
+    second: Enemy1-HitStun_17
+  - first:
+      213: 2349691114011390465
+    second: Enemy1-HitStun_18
+  - first:
+      213: -8694087931147485118
+    second: Enemy1-HitStun_19
+  - first:
+      213: 895028460646808934
+    second: Enemy1-HitStun_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy1-HitStun_0
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 28
+        width: 39
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30de7a4ec925a9a60800000000000000
+      internalID: 7681542948238388483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 29
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92e91aa83c51a3560800000000000000
+      internalID: 7294166476068593193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_2
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 29
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a2367542690aa30800000000000000
+      internalID: 4224541533302631068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_3
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 29
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd00c5ab32e159210800000000000000
+      internalID: 1339009603011870941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_4
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 27
+        width: 39
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7e373cdf54a9f30800000000000000
+      internalID: 4583052527011096524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_5
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 46
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 457d92f890f7c8920800000000000000
+      internalID: 2993907531327854420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_6
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 46
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9710c61bf00ebd600800000000000000
+      internalID: 494234942132978041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_7
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 47
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9eece3f4cdd5f350800000000000000
+      internalID: 6049985512417848991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_8
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 45
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba3f5d2919a925fe0800000000000000
+      internalID: -1201728200530070613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_9
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 44
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d21223866989b1620800000000000000
+      internalID: 2745956169573081389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_10
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 44
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03a4109e69685c9d0800000000000000
+      internalID: -2754647614354798032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_11
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 44
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0263aee1642533390800000000000000
+      internalID: -7839832065202047456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_12
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 48
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 641db2650a4c5e9b0800000000000000
+      internalID: -5051415214106619578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_13
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 22
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90bf1fb133c9c7380800000000000000
+      internalID: -8972124614302762231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_14
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 47
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5be78bdb40c817cc0800000000000000
+      internalID: -3715034265613205835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_15
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 26
+        width: 47
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 620126450041468f0800000000000000
+      internalID: -548291262984089562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_16
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 21
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e789060101d89d1a0800000000000000
+      internalID: -6784236263523182466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_17
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 20
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fa3cb627ca9d410800000000000000
+      internalID: 1502421558139006846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_18
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 20
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1027a867e97cb9020800000000000000
+      internalID: 2349691114011390465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_19
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 21
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24081f10715685780800000000000000
+      internalID: -8694087931147485118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-HitStun_20
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 22
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66db7b494a7cb6c00800000000000000
+      internalID: 895028460646808934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Enemy1-HitStun_0: 7681542948238388483
+      Enemy1-HitStun_1: 7294166476068593193
+      Enemy1-HitStun_10: -2754647614354798032
+      Enemy1-HitStun_11: -7839832065202047456
+      Enemy1-HitStun_12: -5051415214106619578
+      Enemy1-HitStun_13: -8972124614302762231
+      Enemy1-HitStun_14: -3715034265613205835
+      Enemy1-HitStun_15: -548291262984089562
+      Enemy1-HitStun_16: -6784236263523182466
+      Enemy1-HitStun_17: 1502421558139006846
+      Enemy1-HitStun_18: 2349691114011390465
+      Enemy1-HitStun_19: -8694087931147485118
+      Enemy1-HitStun_2: 4224541533302631068
+      Enemy1-HitStun_20: 895028460646808934
+      Enemy1-HitStun_3: 1339009603011870941
+      Enemy1-HitStun_4: 4583052527011096524
+      Enemy1-HitStun_5: 2993907531327854420
+      Enemy1-HitStun_6: 494234942132978041
+      Enemy1-HitStun_7: 6049985512417848991
+      Enemy1-HitStun_8: -1201728200530070613
+      Enemy1-HitStun_9: 2745956169573081389
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

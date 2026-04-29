@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: e0eabcef3ad4bc64f892346125fd48ab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2194846316078228121
+    second: Enemy1-StunLoop_0
+  - first:
+      213: -2288626885147894604
+    second: Enemy1-StunLoop_1
+  - first:
+      213: -3385961438876667205
+    second: Enemy1-StunLoop_2
+  - first:
+      213: 3834783219701820451
+    second: Enemy1-StunLoop_3
+  - first:
+      213: 3032282658590986853
+    second: Enemy1-StunLoop_4
+  - first:
+      213: 8514367732078799616
+    second: Enemy1-StunLoop_5
+  - first:
+      213: 3335996344525419422
+    second: Enemy1-StunLoop_6
+  - first:
+      213: -2633574861540719195
+    second: Enemy1-StunLoop_7
+  - first:
+      213: 5445118538271772015
+    second: Enemy1-StunLoop_8
+  - first:
+      213: -8593311787124153805
+    second: Enemy1-StunLoop_9
+  - first:
+      213: -5132180094739086746
+    second: Enemy1-StunLoop_10
+  - first:
+      213: -1927466400876378963
+    second: Enemy1-StunLoop_11
+  - first:
+      213: -4164126959629091002
+    second: Enemy1-StunLoop_12
+  - first:
+      213: -1207582771744351510
+    second: Enemy1-StunLoop_13
+  - first:
+      213: 3103419803122779768
+    second: Enemy1-StunLoop_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 46
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d159187e65a81e0800000000000000
+      internalID: -2194846316078228121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 46
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bcd95f39f92d30e0800000000000000
+      internalID: -2288626885147894604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 47
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb2f59cc206a201d0800000000000000
+      internalID: -3385961438876667205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 45
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ca4f05503e73530800000000000000
+      internalID: 3834783219701820451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_4
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 44
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56294e32305d41a20800000000000000
+      internalID: 3032282658590986853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_5
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 44
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00bea9d575c192670800000000000000
+      internalID: 8514367732078799616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_6
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 44
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93707f1007db4e20800000000000000
+      internalID: 3335996344525419422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_7
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 48
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a58770ed99a37bd0800000000000000
+      internalID: -2633574861540719195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_8
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 22
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d45990672f09b40800000000000000
+      internalID: 5445118538271772015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_9
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 47
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 332a94c757c6eb880800000000000000
+      internalID: -8593311787124153805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_10
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 21
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6620fb13565d6c8b0800000000000000
+      internalID: -5132180094739086746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_11
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 20
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4434345834045e0800000000000000
+      internalID: -1927466400876378963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_12
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 20
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f3eabb79c0636c0800000000000000
+      internalID: -4164126959629091002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_13
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 21
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeadb4dfdddcd3fe0800000000000000
+      internalID: -1207582771744351510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-StunLoop_14
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 22
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 876cb0a4edf811b20800000000000000
+      internalID: 3103419803122779768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Enemy1-StunLoop_0: -2194846316078228121
+      Enemy1-StunLoop_1: -2288626885147894604
+      Enemy1-StunLoop_10: -5132180094739086746
+      Enemy1-StunLoop_11: -1927466400876378963
+      Enemy1-StunLoop_12: -4164126959629091002
+      Enemy1-StunLoop_13: -1207582771744351510
+      Enemy1-StunLoop_14: 3103419803122779768
+      Enemy1-StunLoop_2: -3385961438876667205
+      Enemy1-StunLoop_3: 3834783219701820451
+      Enemy1-StunLoop_4: 3032282658590986853
+      Enemy1-StunLoop_5: 8514367732078799616
+      Enemy1-StunLoop_6: 3335996344525419422
+      Enemy1-StunLoop_7: -2633574861540719195
+      Enemy1-StunLoop_8: 5445118538271772015
+      Enemy1-StunLoop_9: -8593311787124153805
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

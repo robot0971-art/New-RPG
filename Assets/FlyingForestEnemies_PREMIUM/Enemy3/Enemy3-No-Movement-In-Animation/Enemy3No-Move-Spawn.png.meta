@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: f8dd7864a57a9bf4aad69e0c0f866738
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8670963135747166106
+    second: Enemy3No-Move-Spawn_0
+  - first:
+      213: -5504746054322886590
+    second: Enemy3No-Move-Spawn_1
+  - first:
+      213: -3558999986506593734
+    second: Enemy3No-Move-Spawn_2
+  - first:
+      213: 4124139498366898602
+    second: Enemy3No-Move-Spawn_3
+  - first:
+      213: 1630401257949217591
+    second: Enemy3No-Move-Spawn_4
+  - first:
+      213: 7170503655547067356
+    second: Enemy3No-Move-Spawn_5
+  - first:
+      213: 5121558077250712227
+    second: Enemy3No-Move-Spawn_6
+  - first:
+      213: -6098108790141808837
+    second: Enemy3No-Move-Spawn_7
+  - first:
+      213: 1358247981780696526
+    second: Enemy3No-Move-Spawn_8
+  - first:
+      213: 6271431909291198622
+    second: Enemy3No-Move-Spawn_9
+  - first:
+      213: -1194689524348098303
+    second: Enemy3No-Move-Spawn_10
+  - first:
+      213: -4821841558117236616
+    second: Enemy3No-Move-Spawn_11
+  - first:
+      213: -4342869622280187571
+    second: Enemy3No-Move-Spawn_12
+  - first:
+      213: -8257150297575748770
+    second: Enemy3No-Move-Spawn_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy3No-Move-Spawn_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 6
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f87bef703755870800000000000000
+      internalID: 8670963135747166106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3No-Move-Spawn_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 5
+        width: 43
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 248e95501a63b93b0800000000000000
+      internalID: -5504746054322886590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3No-Move-Spawn_2
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 6
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a87a06e54eb9ec0800000000000000
+      internalID: -3558999986506593734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3No-Move-Spawn_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 7
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa1115ce503eb3930800000000000000
+      internalID: 4124139498366898602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3No-Move-Spawn_4
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 8
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 733c96d4e4950a610800000000000000
+      internalID: 1630401257949217591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3No-Move-Spawn_5
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 8
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdbd581751fb28360800000000000000
+      internalID: 7170503655547067356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3No-Move-Spawn_6
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 8
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a2bf03afed631740800000000000000
+      internalID: 5121558077250712227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3No-Move-Spawn_7
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 8
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f09e15d5a2f5ba0800000000000000
+      internalID: -6098108790141808837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3No-Move-Spawn_8
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 8
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecdfde6d75779d210800000000000000
+      internalID: 1358247981780696526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3No-Move-Spawn_9
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 8
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e980a52181a980750800000000000000
+      internalID: 6271431909291198622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3No-Move-Spawn_10
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 6
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 109e954153c9b6fe0800000000000000
+      internalID: -1194689524348098303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3No-Move-Spawn_11
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 9
+        width: 49
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870c43d66a0651db0800000000000000
+      internalID: -4821841558117236616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3No-Move-Spawn_12
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 7
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d41972a86170bb3c0800000000000000
+      internalID: -4342869622280187571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3No-Move-Spawn_13
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 6
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b8cf77d85b86d80800000000000000
+      internalID: -8257150297575748770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Enemy3No-Move-Spawn_0: 8670963135747166106
+      Enemy3No-Move-Spawn_1: -5504746054322886590
+      Enemy3No-Move-Spawn_10: -1194689524348098303
+      Enemy3No-Move-Spawn_11: -4821841558117236616
+      Enemy3No-Move-Spawn_12: -4342869622280187571
+      Enemy3No-Move-Spawn_13: -8257150297575748770
+      Enemy3No-Move-Spawn_2: -3558999986506593734
+      Enemy3No-Move-Spawn_3: 4124139498366898602
+      Enemy3No-Move-Spawn_4: 1630401257949217591
+      Enemy3No-Move-Spawn_5: 7170503655547067356
+      Enemy3No-Move-Spawn_6: 5121558077250712227
+      Enemy3No-Move-Spawn_7: -6098108790141808837
+      Enemy3No-Move-Spawn_8: 1358247981780696526
+      Enemy3No-Move-Spawn_9: 6271431909291198622
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

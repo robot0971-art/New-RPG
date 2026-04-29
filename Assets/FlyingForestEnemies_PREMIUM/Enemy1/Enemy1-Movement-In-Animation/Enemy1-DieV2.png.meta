@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 1c1a24421b3aa294ca48313a8e9eaa8c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8779543637175343341
+    second: Enemy1-DieV2_0
+  - first:
+      213: -2474701598353264169
+    second: Enemy1-DieV2_1
+  - first:
+      213: -1311502061711693339
+    second: Enemy1-DieV2_2
+  - first:
+      213: 3205353899667910988
+    second: Enemy1-DieV2_3
+  - first:
+      213: 3212557208717461674
+    second: Enemy1-DieV2_4
+  - first:
+      213: 3387761149245753742
+    second: Enemy1-DieV2_5
+  - first:
+      213: -351104355332887277
+    second: Enemy1-DieV2_6
+  - first:
+      213: -3250226592831812057
+    second: Enemy1-DieV2_7
+  - first:
+      213: 3824806543986939972
+    second: Enemy1-DieV2_8
+  - first:
+      213: 8333121150498702678
+    second: Enemy1-DieV2_9
+  - first:
+      213: 4336819646355066866
+    second: Enemy1-DieV2_10
+  - first:
+      213: -3671588574267332610
+    second: Enemy1-DieV2_11
+  - first:
+      213: -5753709555184975295
+    second: Enemy1-DieV2_12
+  - first:
+      213: -6873530604000128224
+    second: Enemy1-DieV2_13
+  - first:
+      213: 7995834293200860327
+    second: Enemy1-DieV2_14
+  - first:
+      213: -47431970877102031
+    second: Enemy1-DieV2_15
+  - first:
+      213: 8448488239304108563
+    second: Enemy1-DieV2_16
+  - first:
+      213: 8678164853636990939
+    second: Enemy1-DieV2_17
+  - first:
+      213: -6008659623971015658
+    second: Enemy1-DieV2_18
+  - first:
+      213: -6271687947221743583
+    second: Enemy1-DieV2_19
+  - first:
+      213: -1195129919494807306
+    second: Enemy1-DieV2_20
+  - first:
+      213: -7969935523582440897
+    second: Enemy1-DieV2_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy1-DieV2_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 23
+        width: 47
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de890e70c6437d970800000000000000
+      internalID: 8779543637175343341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 27
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1ff01020818add0800000000000000
+      internalID: -2474701598353264169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 32
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e96b71d2db9ccde0800000000000000
+      internalID: -1311502061711693339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_3
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 33
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c417e199364bb7c20800000000000000
+      internalID: 3205353899667910988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_4
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 26
+        width: 34
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa8893ea2cb459c20800000000000000
+      internalID: 3212557208717461674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_5
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 19
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8989ace0deb30f20800000000000000
+      internalID: 3387761149245753742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_6
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 14
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d6a45f270a02bf0800000000000000
+      internalID: -351104355332887277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_7
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 7
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72e4bbe5220e4e2d0800000000000000
+      internalID: -3250226592831812057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_8
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 2
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4485eec7941741530800000000000000
+      internalID: 3824806543986939972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_9
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 18
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65505cd198135a370800000000000000
+      internalID: 8333121150498702678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_10
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 17
+        width: 8
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ffcdebad7a7f2c30800000000000000
+      internalID: 4336819646355066866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_11
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 24
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef7a96505a5eb0dc0800000000000000
+      internalID: -3671588574267332610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_12
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 27
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 142cd6ed4a7b620b0800000000000000
+      internalID: -5753709555184975295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_13
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 36
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 023dbcb45505c90a0800000000000000
+      internalID: -6873530604000128224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_14
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 24
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4bf190de8e6fe60800000000000000
+      internalID: 7995834293200860327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_15
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 31
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 138afd0bfdc775ff0800000000000000
+      internalID: -47431970877102031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_16
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 32
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a69c8aa4f0f3570800000000000000
+      internalID: 8448488239304108563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_17
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 21
+        width: 65
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd7005b94f80f6870800000000000000
+      internalID: 8678164853636990939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_18
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 0
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 614b9f048e3fc9ca0800000000000000
+      internalID: -6008659623971015658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_19
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 5
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 128cfb37a0d76f8a0800000000000000
+      internalID: -6271687947221743583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_20
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 11
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f022189bab0a6fe0800000000000000
+      internalID: -1195129919494807306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1-DieV2_21
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 16
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a0a1a2ed9156190800000000000000
+      internalID: -7969935523582440897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Enemy1-DieV2_0: 8779543637175343341
+      Enemy1-DieV2_1: -2474701598353264169
+      Enemy1-DieV2_10: 4336819646355066866
+      Enemy1-DieV2_11: -3671588574267332610
+      Enemy1-DieV2_12: -5753709555184975295
+      Enemy1-DieV2_13: -6873530604000128224
+      Enemy1-DieV2_14: 7995834293200860327
+      Enemy1-DieV2_15: -47431970877102031
+      Enemy1-DieV2_16: 8448488239304108563
+      Enemy1-DieV2_17: 8678164853636990939
+      Enemy1-DieV2_18: -6008659623971015658
+      Enemy1-DieV2_19: -6271687947221743583
+      Enemy1-DieV2_2: -1311502061711693339
+      Enemy1-DieV2_20: -1195129919494807306
+      Enemy1-DieV2_21: -7969935523582440897
+      Enemy1-DieV2_3: 3205353899667910988
+      Enemy1-DieV2_4: 3212557208717461674
+      Enemy1-DieV2_5: 3387761149245753742
+      Enemy1-DieV2_6: -351104355332887277
+      Enemy1-DieV2_7: -3250226592831812057
+      Enemy1-DieV2_8: 3824806543986939972
+      Enemy1-DieV2_9: 8333121150498702678
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

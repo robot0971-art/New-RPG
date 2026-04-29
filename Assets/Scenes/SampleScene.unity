@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 312558545}
   - component: {fileID: 312558546}
+  - component: {fileID: 312558547}
   m_Layer: 0
   m_Name: forest_ground_0
   m_TagString: Untagged
@@ -145,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 312558544}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.39, y: -0.3, z: 0}
+  m_LocalPosition: {x: -0.39, y: -0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -210,6 +211,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &312558547
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312558544}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 3.1399999, y: 0.19999999, z: 3.12, w: 0.21}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.24, y: 0.84}
+    newSize: {x: 10.24, y: 0.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 10.24, y: 0.84}
+  m_EdgeRadius: 0
 --- !u!1 &346956148
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,17 +332,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346956148}
   m_CullTransparentMesh: 1
---- !u!114 &379972234 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4945197535677033573, guid: 21956588f5618ee4ba147fc6b12fef6d, type: 3}
-  m_PrefabInstance: {fileID: 1863546160858816923}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12990d91fbf4c6b4bbaf3baee378ae2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AutoBattleSensor2D
 --- !u!1 &504363754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,17 +1038,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 895930326984349434, guid: 41e710f8948644847a2698800256dd8f, type: 3}
   m_PrefabInstance: {fileID: 1814792074531666334}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1156195201 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1789242319299274251, guid: 21956588f5618ee4ba147fc6b12fef6d, type: 3}
-  m_PrefabInstance: {fileID: 1863546160858816923}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a52b45964c43a7643a2c8507bd37db4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AutoBattleUnit
 --- !u!1 &1230928700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,9 +1313,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d813da724685eb469dbe5e4ab154542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameLifetimeScope
-  player: {fileID: 1156195201}
+  player: {fileID: 0}
   battleController: {fileID: 1983589700}
-  playerSensor: {fileID: 379972234}
+  playerSensor: {fileID: 0}
   backgroundScroller: {fileID: 0}
 --- !u!4 &1835130606
 Transform:
@@ -1358,7 +1383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5675119a6e67a42aa8c05ea3c5a61b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExpBarUI
-  player: {fileID: 1156195201}
+  player: {fileID: 0}
   expSlider: {fileID: 1881284947}
   expFillImage: {fileID: 2087863866}
   backgroundRect: {fileID: 346956149}

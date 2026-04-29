@@ -13,6 +13,11 @@ public sealed class MonsterData : ScriptableObject
     [SerializeField] private int goldReward = 10;
     [SerializeField] private int spawnWeight = 1;
 
+    [Header("Spawn Transform")]
+    [SerializeField] private float spawnYOffset = 0f;
+    [SerializeField] private float spawnZOffset = 0f;
+    [SerializeField] private Vector3 spawnRotation = Vector3.zero;
+
     public string MonsterName => monsterName;
     public AutoBattleUnit Prefab => prefab;
     public float MaxHealth => maxHealth;
@@ -22,4 +27,7 @@ public sealed class MonsterData : ScriptableObject
     public float ExpReward => expReward;
     public int GoldReward => goldReward;
     public int SpawnWeight => Mathf.Max(0, spawnWeight);
+    public float SpawnYOffset => spawnYOffset;
+    public float SpawnZOffset => spawnZOffset;
+    public Vector3 SpawnRotation => spawnRotation;
 }

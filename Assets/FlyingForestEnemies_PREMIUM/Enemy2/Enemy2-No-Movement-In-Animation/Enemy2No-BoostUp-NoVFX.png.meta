@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 86f55c608e633be4080f50469266cc43
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8603364668838403921
+    second: Enemy2No-BoostUp-NoVFX_0
+  - first:
+      213: -4839773563544213416
+    second: Enemy2No-BoostUp-NoVFX_1
+  - first:
+      213: -2323563930601504791
+    second: Enemy2No-BoostUp-NoVFX_2
+  - first:
+      213: -8622982914447268687
+    second: Enemy2No-BoostUp-NoVFX_3
+  - first:
+      213: 4010444502999784962
+    second: Enemy2No-BoostUp-NoVFX_4
+  - first:
+      213: 1083107890072148706
+    second: Enemy2No-BoostUp-NoVFX_5
+  - first:
+      213: -8130863554070974978
+    second: Enemy2No-BoostUp-NoVFX_6
+  - first:
+      213: -5167544267270076212
+    second: Enemy2No-BoostUp-NoVFX_7
+  - first:
+      213: 103022507858516726
+    second: Enemy2No-BoostUp-NoVFX_8
+  - first:
+      213: 6125033735405298754
+    second: Enemy2No-BoostUp-NoVFX_9
+  - first:
+      213: -4620955605085885380
+    second: Enemy2No-BoostUp-NoVFX_10
+  - first:
+      213: 6608579216846186304
+    second: Enemy2No-BoostUp-NoVFX_11
+  - first:
+      213: 7787376974128499940
+    second: Enemy2No-BoostUp-NoVFX_12
+  - first:
+      213: -6680360283162427857
+    second: Enemy2No-BoostUp-NoVFX_13
+  - first:
+      213: 9060388712965737165
+    second: Enemy2No-BoostUp-NoVFX_14
+  - first:
+      213: -5148610750865722387
+    second: Enemy2No-BoostUp-NoVFX_15
+  - first:
+      213: 1953565264415474962
+    second: Enemy2No-BoostUp-NoVFX_16
+  - first:
+      213: 6434476186212800893
+    second: Enemy2No-BoostUp-NoVFX_17
+  - first:
+      213: 8171078271902206573
+    second: Enemy2No-BoostUp-NoVFX_18
+  - first:
+      213: 6715327258523415596
+    second: Enemy2No-BoostUp-NoVFX_19
+  - first:
+      213: 6439181636282257255
+    second: Enemy2No-BoostUp-NoVFX_20
+  - first:
+      213: 5469341918273852669
+    second: Enemy2No-BoostUp-NoVFX_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 14
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f524f659a456770800000000000000
+      internalID: 8603364668838403921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 16
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858ee9f069ba5dcb0800000000000000
+      internalID: -4839773563544213416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 17
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ef36977aea01cfd0800000000000000
+      internalID: -2323563930601504791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 7
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b4ab10d9b2055880800000000000000
+      internalID: -8622982914447268687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_4
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 8
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20e58b8f606f7a730800000000000000
+      internalID: 4010444502999784962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_5
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 11
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea5c2133e8f70f00800000000000000
+      internalID: 1083107890072148706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 10
+        width: 42
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efded6e3dae592f80800000000000000
+      internalID: -8130863554070974978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_7
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 14
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc8c2442ed13948b0800000000000000
+      internalID: -5167544267270076212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_8
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 17
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fad6c0dc620e6100800000000000000
+      internalID: 103022507858516726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_9
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 18
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 244ed140bbd700550800000000000000
+      internalID: 6125033735405298754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_10
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 19
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3c610c2c511fdfb0800000000000000
+      internalID: -4620955605085885380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_11
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 6
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0476522b8c366bb50800000000000000
+      internalID: 6608579216846186304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_12
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 3
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ec4cf24912521c60800000000000000
+      internalID: 7787376974128499940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_13
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 14
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2eb97e67b79a43a0800000000000000
+      internalID: -6680360283162427857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_14
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 13
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca084bc787fcbd70800000000000000
+      internalID: 9060388712965737165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_15
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 15
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de334e3fcc57c88b0800000000000000
+      internalID: -5148610750865722387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_16
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 12
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 215c60fe1457c1b10800000000000000
+      internalID: 1953565264415474962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_17
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 11
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d799ce2000adb4950800000000000000
+      internalID: 6434476186212800893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_18
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 12
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ac4a46560856170800000000000000
+      internalID: 8171078271902206573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_19
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 13
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2439c2ff82a13d50800000000000000
+      internalID: 6715327258523415596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_20
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 13
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76f82daf4919c5950800000000000000
+      internalID: 6439181636282257255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2No-BoostUp-NoVFX_21
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 14
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df4ddd13f7107eb40800000000000000
+      internalID: 5469341918273852669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Enemy2No-BoostUp-NoVFX_0: 8603364668838403921
+      Enemy2No-BoostUp-NoVFX_1: -4839773563544213416
+      Enemy2No-BoostUp-NoVFX_10: -4620955605085885380
+      Enemy2No-BoostUp-NoVFX_11: 6608579216846186304
+      Enemy2No-BoostUp-NoVFX_12: 7787376974128499940
+      Enemy2No-BoostUp-NoVFX_13: -6680360283162427857
+      Enemy2No-BoostUp-NoVFX_14: 9060388712965737165
+      Enemy2No-BoostUp-NoVFX_15: -5148610750865722387
+      Enemy2No-BoostUp-NoVFX_16: 1953565264415474962
+      Enemy2No-BoostUp-NoVFX_17: 6434476186212800893
+      Enemy2No-BoostUp-NoVFX_18: 8171078271902206573
+      Enemy2No-BoostUp-NoVFX_19: 6715327258523415596
+      Enemy2No-BoostUp-NoVFX_2: -2323563930601504791
+      Enemy2No-BoostUp-NoVFX_20: 6439181636282257255
+      Enemy2No-BoostUp-NoVFX_21: 5469341918273852669
+      Enemy2No-BoostUp-NoVFX_3: -8622982914447268687
+      Enemy2No-BoostUp-NoVFX_4: 4010444502999784962
+      Enemy2No-BoostUp-NoVFX_5: 1083107890072148706
+      Enemy2No-BoostUp-NoVFX_6: -8130863554070974978
+      Enemy2No-BoostUp-NoVFX_7: -5167544267270076212
+      Enemy2No-BoostUp-NoVFX_8: 103022507858516726
+      Enemy2No-BoostUp-NoVFX_9: 6125033735405298754
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

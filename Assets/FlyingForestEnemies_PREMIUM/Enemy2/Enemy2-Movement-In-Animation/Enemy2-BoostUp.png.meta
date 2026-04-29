@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 253e832fdf329a74eaac6cfd3da7deb4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4657836079018474347
+    second: Enemy2-BoostUp_0
+  - first:
+      213: 1897567160443936235
+    second: Enemy2-BoostUp_1
+  - first:
+      213: -6241384325317675383
+    second: Enemy2-BoostUp_2
+  - first:
+      213: 7107271241448047311
+    second: Enemy2-BoostUp_3
+  - first:
+      213: 950075987230043654
+    second: Enemy2-BoostUp_4
+  - first:
+      213: -4727500614187308291
+    second: Enemy2-BoostUp_5
+  - first:
+      213: -6216238114989681504
+    second: Enemy2-BoostUp_6
+  - first:
+      213: 5305480087967949718
+    second: Enemy2-BoostUp_7
+  - first:
+      213: -8165579488807620243
+    second: Enemy2-BoostUp_8
+  - first:
+      213: -6348972153933109809
+    second: Enemy2-BoostUp_9
+  - first:
+      213: 5963971258010911807
+    second: Enemy2-BoostUp_10
+  - first:
+      213: -5326008895798356467
+    second: Enemy2-BoostUp_11
+  - first:
+      213: 3183577950127157432
+    second: Enemy2-BoostUp_12
+  - first:
+      213: 902315384572049087
+    second: Enemy2-BoostUp_13
+  - first:
+      213: 7865076213550036247
+    second: Enemy2-BoostUp_14
+  - first:
+      213: -5336981720965184264
+    second: Enemy2-BoostUp_15
+  - first:
+      213: 1849450986726817237
+    second: Enemy2-BoostUp_16
+  - first:
+      213: -4398474977481110646
+    second: Enemy2-BoostUp_17
+  - first:
+      213: 1161894698789982281
+    second: Enemy2-BoostUp_18
+  - first:
+      213: -7170196902568815411
+    second: Enemy2-BoostUp_19
+  - first:
+      213: 2409399964325622944
+    second: Enemy2-BoostUp_20
+  - first:
+      213: 7913088276826472341
+    second: Enemy2-BoostUp_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 14
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6bf4ef4c35f3a040800000000000000
+      internalID: 4657836079018474347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 16
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bed15b75743855a10800000000000000
+      internalID: 1897567160443936235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 17
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 986bfbe36062269a0800000000000000
+      internalID: -6241384325317675383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 7
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc24cd4c98912a260800000000000000
+      internalID: 7107271241448047311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_4
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 8
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ea970a3195f2d00800000000000000
+      internalID: 950075987230043654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_5
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 11
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfaacef1d3b846eb0800000000000000
+      internalID: -4727500614187308291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 10
+        width: 42
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a4dbc49e5c7bb9a0800000000000000
+      internalID: -6216238114989681504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_7
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 14
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 693ec36c70ad0a940800000000000000
+      internalID: 5305480087967949718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_8
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 17
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d61f760d7b80eae80800000000000000
+      internalID: -8165579488807620243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_9
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 18
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc568fbd67be3e7a0800000000000000
+      internalID: -6348972153933109809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_10
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 19
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f34416cb24844c250800000000000000
+      internalID: 5963971258010911807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_11
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 6
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d065e5fa0273616b0800000000000000
+      internalID: -5326008895798356467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_12
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 3
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b0781047475e2c20800000000000000
+      internalID: 3183577950127157432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_13
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 14
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb679c4cf0ba58c00800000000000000
+      internalID: 902315384572049087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_14
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 13
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7153600352d562d60800000000000000
+      internalID: 7865076213550036247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_15
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 15
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f40e1db66b3fe5b0800000000000000
+      internalID: -5336981720965184264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_16
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 12
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ddf855afd19aa910800000000000000
+      internalID: 1849450986726817237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_17
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 11
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b4bc5ef4a75f2c0800000000000000
+      internalID: -4398474977481110646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_18
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 12
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94059c39211ef1010800000000000000
+      internalID: 1161894698789982281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_19
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 13
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc497cc08e75e7c90800000000000000
+      internalID: -7170196902568815411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_20
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 13
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a4b7738088ef6120800000000000000
+      internalID: 2409399964325622944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-BoostUp_21
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 14
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59fbc88ccdfe0dd60800000000000000
+      internalID: 7913088276826472341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Enemy2-BoostUp_0: 4657836079018474347
+      Enemy2-BoostUp_1: 1897567160443936235
+      Enemy2-BoostUp_10: 5963971258010911807
+      Enemy2-BoostUp_11: -5326008895798356467
+      Enemy2-BoostUp_12: 3183577950127157432
+      Enemy2-BoostUp_13: 902315384572049087
+      Enemy2-BoostUp_14: 7865076213550036247
+      Enemy2-BoostUp_15: -5336981720965184264
+      Enemy2-BoostUp_16: 1849450986726817237
+      Enemy2-BoostUp_17: -4398474977481110646
+      Enemy2-BoostUp_18: 1161894698789982281
+      Enemy2-BoostUp_19: -7170196902568815411
+      Enemy2-BoostUp_2: -6241384325317675383
+      Enemy2-BoostUp_20: 2409399964325622944
+      Enemy2-BoostUp_21: 7913088276826472341
+      Enemy2-BoostUp_3: 7107271241448047311
+      Enemy2-BoostUp_4: 950075987230043654
+      Enemy2-BoostUp_5: -4727500614187308291
+      Enemy2-BoostUp_6: -6216238114989681504
+      Enemy2-BoostUp_7: 5305480087967949718
+      Enemy2-BoostUp_8: -8165579488807620243
+      Enemy2-BoostUp_9: -6348972153933109809
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

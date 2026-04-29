@@ -428,7 +428,16 @@ public sealed class AutoBattleController : MonoBehaviour
             Debug.LogWarning($"<color=red>[BattleCtrl] enemySpawnOffsetX({enemySpawnOffsetX}) is too small! Using {actualOffset} instead.</color>");
         }
         
-        currentEnemy.transform.position = player.transform.position + Vector3.right * actualOffset;
+        Vector3 spawnPos = player.transform.position + Vector3.right * actualOffset;
+        if (currentMonsterData != null)
+        {
+            spawnPos += new Vector3(0f, currentMonsterData.SpawnYOffset, currentMonsterData.SpawnZOffset);
+        }
+        currentEnemy.transform.position = spawnPos;
+        if (currentMonsterData != null)
+        {
+            currentEnemy.transform.rotation = Quaternion.Euler(currentMonsterData.SpawnRotation);
+        }
         currentEnemy.name = (currentMonsterData != null ? currentMonsterData.MonsterName : "Enemy") + "_" + Time.frameCount;
         currentEnemy.ResetUnit();
         currentEnemy.PlayIdle();

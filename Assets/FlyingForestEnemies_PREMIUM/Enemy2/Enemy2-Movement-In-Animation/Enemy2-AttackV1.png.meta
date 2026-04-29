@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: f078d30e3a6323a4a98c7a2ceb63fd8b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -556935967321269004
+    second: Enemy2-AttackV1_0
+  - first:
+      213: 65654844847065941
+    second: Enemy2-AttackV1_1
+  - first:
+      213: -8087296365908960945
+    second: Enemy2-AttackV1_2
+  - first:
+      213: 511072901548900665
+    second: Enemy2-AttackV1_3
+  - first:
+      213: 6262737250053604227
+    second: Enemy2-AttackV1_4
+  - first:
+      213: -5614616558483816026
+    second: Enemy2-AttackV1_5
+  - first:
+      213: 8675764376260913010
+    second: Enemy2-AttackV1_6
+  - first:
+      213: 4872216449497401849
+    second: Enemy2-AttackV1_7
+  - first:
+      213: -2672250395566744773
+    second: Enemy2-AttackV1_8
+  - first:
+      213: -230404751976558928
+    second: Enemy2-AttackV1_9
+  - first:
+      213: -1940271712114531318
+    second: Enemy2-AttackV1_10
+  - first:
+      213: 3051978375707599245
+    second: Enemy2-AttackV1_11
+  - first:
+      213: -394739876269012720
+    second: Enemy2-AttackV1_12
+  - first:
+      213: -1611032099472438007
+    second: Enemy2-AttackV1_13
+  - first:
+      213: -6375901979953214280
+    second: Enemy2-AttackV1_14
+  - first:
+      213: -7335025463487858134
+    second: Enemy2-AttackV1_15
+  - first:
+      213: -2348369292809560743
+    second: Enemy2-AttackV1_16
+  - first:
+      213: 1886596272205343844
+    second: Enemy2-AttackV1_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 14
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fc5d2140bd5548f0800000000000000
+      internalID: -556935967321269004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 15
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b84e8cbb049e000800000000000000
+      internalID: 65654844847065941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 10
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4950b4bdc624cf80800000000000000
+      internalID: -8087296365908960945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 8
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931862f9812b71700800000000000000
+      internalID: 511072901548900665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_4
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 16
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3834d07f856b9e650800000000000000
+      internalID: 6262737250053604227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_5
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 14
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a1cb81dcffd412b0800000000000000
+      internalID: -5614616558483816026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 28
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 277250aebb1866870800000000000000
+      internalID: 8675764376260913010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_7
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 12
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f98b15fb079d9340800000000000000
+      internalID: 4872216449497401849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_8
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 29
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3bd8556c624aead0800000000000000
+      internalID: -2672250395566744773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_9
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 16
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be00eb49107dccf0800000000000000
+      internalID: -230404751976558928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_10
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a04aca76825c215e0800000000000000
+      internalID: -1940271712114531318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_11
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 19
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81a932a92eca5a20800000000000000
+      internalID: 3051978375707599245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_12
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 31
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019cd488c2a958af0800000000000000
+      internalID: -394739876269012720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_13
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 20
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d813557d674a9e0800000000000000
+      internalID: -1611032099472438007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_14
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 15
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bccd222eee3487a0800000000000000
+      internalID: -6375901979953214280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_15
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 14
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a7c5e1431c43a90800000000000000
+      internalID: -7335025463487858134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_16
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 13
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d96a4029ae86fd0800000000000000
+      internalID: -2348369292809560743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2-AttackV1_17
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 14
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46c206f50598e2a10800000000000000
+      internalID: 1886596272205343844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Enemy2-AttackV1_0: -556935967321269004
+      Enemy2-AttackV1_1: 65654844847065941
+      Enemy2-AttackV1_10: -1940271712114531318
+      Enemy2-AttackV1_11: 3051978375707599245
+      Enemy2-AttackV1_12: -394739876269012720
+      Enemy2-AttackV1_13: -1611032099472438007
+      Enemy2-AttackV1_14: -6375901979953214280
+      Enemy2-AttackV1_15: -7335025463487858134
+      Enemy2-AttackV1_16: -2348369292809560743
+      Enemy2-AttackV1_17: 1886596272205343844
+      Enemy2-AttackV1_2: -8087296365908960945
+      Enemy2-AttackV1_3: 511072901548900665
+      Enemy2-AttackV1_4: 6262737250053604227
+      Enemy2-AttackV1_5: -5614616558483816026
+      Enemy2-AttackV1_6: 8675764376260913010
+      Enemy2-AttackV1_7: 4872216449497401849
+      Enemy2-AttackV1_8: -2672250395566744773
+      Enemy2-AttackV1_9: -230404751976558928
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

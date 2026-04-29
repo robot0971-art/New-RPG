@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 828fc8e1d09e48244a25a7b7c2bb75db
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8441519158863796254
+    second: Enemy1No-Move-AttackV2-NoVFX_0
+  - first:
+      213: -7181780253129234418
+    second: Enemy1No-Move-AttackV2-NoVFX_1
+  - first:
+      213: 7485770209243871360
+    second: Enemy1No-Move-AttackV2-NoVFX_2
+  - first:
+      213: 6672735183045787985
+    second: Enemy1No-Move-AttackV2-NoVFX_3
+  - first:
+      213: 792055210394757878
+    second: Enemy1No-Move-AttackV2-NoVFX_4
+  - first:
+      213: -1152912669516982645
+    second: Enemy1No-Move-AttackV2-NoVFX_5
+  - first:
+      213: -4021339964018267847
+    second: Enemy1No-Move-AttackV2-NoVFX_6
+  - first:
+      213: 5232054887257152522
+    second: Enemy1No-Move-AttackV2-NoVFX_7
+  - first:
+      213: 2026771051733620691
+    second: Enemy1No-Move-AttackV2-NoVFX_8
+  - first:
+      213: -944078767041781117
+    second: Enemy1No-Move-AttackV2-NoVFX_9
+  - first:
+      213: 7415202687963158895
+    second: Enemy1No-Move-AttackV2-NoVFX_10
+  - first:
+      213: -4785457019486222597
+    second: Enemy1No-Move-AttackV2-NoVFX_11
+  - first:
+      213: -2400157161508847047
+    second: Enemy1No-Move-AttackV2-NoVFX_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy1No-Move-AttackV2-NoVFX_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 23
+        width: 47
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e7e443dc03b9da80800000000000000
+      internalID: -8441519158863796254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1No-Move-AttackV2-NoVFX_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 20
+        width: 36
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e08215519e0355c90800000000000000
+      internalID: -7181780253129234418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1No-Move-AttackV2-NoVFX_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 18
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088be20185cc2e760800000000000000
+      internalID: 7485770209243871360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1No-Move-AttackV2-NoVFX_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 18
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15102b99b415a9c50800000000000000
+      internalID: 6672735183045787985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1No-Move-AttackV2-NoVFX_4
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 18
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6faa3127402fdfa00800000000000000
+      internalID: 792055210394757878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1No-Move-AttackV2-NoVFX_5
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 17
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b86946419080000f0800000000000000
+      internalID: -1152912669516982645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1No-Move-AttackV2-NoVFX_6
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 23
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 939eb93db945138c0800000000000000
+      internalID: -4021339964018267847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1No-Move-AttackV2-NoVFX_7
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 23
+        width: 39
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0c1f48033efb9840800000000000000
+      internalID: 5232054887257152522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1No-Move-AttackV2-NoVFX_8
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 21
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d790a38889802c10800000000000000
+      internalID: 2026771051733620691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1No-Move-AttackV2-NoVFX_9
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 21
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3826c720d55f5e2f0800000000000000
+      internalID: -944078767041781117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1No-Move-AttackV2-NoVFX_10
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 20
+        width: 37
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f69d099ae8718e660800000000000000
+      internalID: 7415202687963158895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1No-Move-AttackV2-NoVFX_11
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 24
+        width: 41
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf6cf99f134a69db0800000000000000
+      internalID: -4785457019486222597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1No-Move-AttackV2-NoVFX_12
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 23
+        width: 47
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 932c72737cde0bed0800000000000000
+      internalID: -2400157161508847047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Enemy1No-Move-AttackV2-NoVFX_0: -8441519158863796254
+      Enemy1No-Move-AttackV2-NoVFX_1: -7181780253129234418
+      Enemy1No-Move-AttackV2-NoVFX_10: 7415202687963158895
+      Enemy1No-Move-AttackV2-NoVFX_11: -4785457019486222597
+      Enemy1No-Move-AttackV2-NoVFX_12: -2400157161508847047
+      Enemy1No-Move-AttackV2-NoVFX_2: 7485770209243871360
+      Enemy1No-Move-AttackV2-NoVFX_3: 6672735183045787985
+      Enemy1No-Move-AttackV2-NoVFX_4: 792055210394757878
+      Enemy1No-Move-AttackV2-NoVFX_5: -1152912669516982645
+      Enemy1No-Move-AttackV2-NoVFX_6: -4021339964018267847
+      Enemy1No-Move-AttackV2-NoVFX_7: 5232054887257152522
+      Enemy1No-Move-AttackV2-NoVFX_8: 2026771051733620691
+      Enemy1No-Move-AttackV2-NoVFX_9: -944078767041781117
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

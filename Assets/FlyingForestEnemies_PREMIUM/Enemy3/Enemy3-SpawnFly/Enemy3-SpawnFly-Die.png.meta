@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 7b8a6830a50ca2b448fb64e0e84bb84d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6370119707849736677
+    second: Enemy3-SpawnFly-Die_0
+  - first:
+      213: 5148782628377805702
+    second: Enemy3-SpawnFly-Die_1
+  - first:
+      213: -7012707302736169617
+    second: Enemy3-SpawnFly-Die_2
+  - first:
+      213: 7602926837897562217
+    second: Enemy3-SpawnFly-Die_3
+  - first:
+      213: 8342969761412443367
+    second: Enemy3-SpawnFly-Die_4
+  - first:
+      213: 694371041060084179
+    second: Enemy3-SpawnFly-Die_5
+  - first:
+      213: -5331658624579005932
+    second: Enemy3-SpawnFly-Die_6
+  - first:
+      213: -1991401654265955524
+    second: Enemy3-SpawnFly-Die_7
+  - first:
+      213: 773118974879656036
+    second: Enemy3-SpawnFly-Die_8
+  - first:
+      213: -4952636488288253063
+    second: Enemy3-SpawnFly-Die_9
+  - first:
+      213: -5625262661886052098
+    second: Enemy3-SpawnFly-Die_10
+  - first:
+      213: 5757750541986222188
+    second: Enemy3-SpawnFly-Die_11
+  - first:
+      213: -8260596440542073466
+    second: Enemy3-SpawnFly-Die_12
+  - first:
+      213: -1444169825239664328
+    second: Enemy3-SpawnFly-Die_13
+  - first:
+      213: -7953953592557181394
+    second: Enemy3-SpawnFly-Die_14
+  - first:
+      213: 4236860577489278907
+    second: Enemy3-SpawnFly-Die_15
+  - first:
+      213: -1617778221693885879
+    second: Enemy3-SpawnFly-Die_16
+  - first:
+      213: 5551399874294593761
+    second: Enemy3-SpawnFly-Die_17
+  - first:
+      213: -4104659580501806198
+    second: Enemy3-SpawnFly-Die_18
+  - first:
+      213: 7509791130426111308
+    second: Enemy3-SpawnFly-Die_19
+  - first:
+      213: -8608189013071896510
+    second: Enemy3-SpawnFly-Die_20
+  - first:
+      213: 650115070566161946
+    second: Enemy3-SpawnFly-Die_21
+  - first:
+      213: 4347142967909203389
+    second: Enemy3-SpawnFly-Die_22
+  - first:
+      213: -2246261636279545234
+    second: Enemy3-SpawnFly-Die_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_0
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 5
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e1491bbf16376850800000000000000
+      internalID: 6370119707849736677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 10
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68349266586247740800000000000000
+      internalID: 5148782628377805702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_2
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 21
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f657f92fcdbddae90800000000000000
+      internalID: -7012707302736169617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 22
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9680b225da5038960800000000000000
+      internalID: 7602926837897562217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_4
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 21
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec60d88bce28c370800000000000000
+      internalID: 8342969761412443367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_5
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 26
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d954bc68c6e2a900800000000000000
+      internalID: 694371041060084179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_6
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 17
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4121252bab42206b0800000000000000
+      internalID: -5331658624579005932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_7
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 16
+        width: 40
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3b3a501fbe1d54e0800000000000000
+      internalID: -1991401654265955524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 11
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 468e0da8c9baaba00800000000000000
+      internalID: 773118974879656036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_9
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 13
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97bc0f5aa53b44bb0800000000000000
+      internalID: -4952636488288253063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_10
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 11
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef87306b96d0fe1b0800000000000000
+      internalID: -5625262661886052098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_11
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 11
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60d660bc93a7ef40800000000000000
+      internalID: 5757750541986222188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_12
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 8
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68d22a8cd477c5d80800000000000000
+      internalID: -8260596440542073466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_13
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 15
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839704b023745fbe0800000000000000
+      internalID: -1444169825239664328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_14
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 9
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26efa37951ed9190800000000000000
+      internalID: -7953953592557181394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_15
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 10
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb7da145f3a5cca30800000000000000
+      internalID: 4236860577489278907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_16
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 14
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 942a29a574f7c89e0800000000000000
+      internalID: -1617778221693885879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_17
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 13
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e83a79e5c88a0d40800000000000000
+      internalID: 5551399874294593761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_18
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 6
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a833944ebd15907c0800000000000000
+      internalID: -4104659580501806198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_19
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c457d6a9e33283860800000000000000
+      internalID: 7509791130426111308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_20
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 5
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 240ed6463b1998880800000000000000
+      internalID: -8608189013071896510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_21
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 2
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1e5934563ca50900800000000000000
+      internalID: 650115070566161946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_22
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbdb0164f77245c30800000000000000
+      internalID: 4347142967909203389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3-SpawnFly-Die_23
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6258f861fca3d0e0800000000000000
+      internalID: -2246261636279545234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Enemy3-SpawnFly-Die_0: 6370119707849736677
+      Enemy3-SpawnFly-Die_1: 5148782628377805702
+      Enemy3-SpawnFly-Die_10: -5625262661886052098
+      Enemy3-SpawnFly-Die_11: 5757750541986222188
+      Enemy3-SpawnFly-Die_12: -8260596440542073466
+      Enemy3-SpawnFly-Die_13: -1444169825239664328
+      Enemy3-SpawnFly-Die_14: -7953953592557181394
+      Enemy3-SpawnFly-Die_15: 4236860577489278907
+      Enemy3-SpawnFly-Die_16: -1617778221693885879
+      Enemy3-SpawnFly-Die_17: 5551399874294593761
+      Enemy3-SpawnFly-Die_18: -4104659580501806198
+      Enemy3-SpawnFly-Die_19: 7509791130426111308
+      Enemy3-SpawnFly-Die_2: -7012707302736169617
+      Enemy3-SpawnFly-Die_20: -8608189013071896510
+      Enemy3-SpawnFly-Die_21: 650115070566161946
+      Enemy3-SpawnFly-Die_22: 4347142967909203389
+      Enemy3-SpawnFly-Die_23: -2246261636279545234
+      Enemy3-SpawnFly-Die_3: 7602926837897562217
+      Enemy3-SpawnFly-Die_4: 8342969761412443367
+      Enemy3-SpawnFly-Die_5: 694371041060084179
+      Enemy3-SpawnFly-Die_6: -5331658624579005932
+      Enemy3-SpawnFly-Die_7: -1991401654265955524
+      Enemy3-SpawnFly-Die_8: 773118974879656036
+      Enemy3-SpawnFly-Die_9: -4952636488288253063
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
