@@ -32,6 +32,7 @@ public sealed class AutoBattleUnit : MonoBehaviour
     public event Action<AutoBattleUnit> Damaged;
     public event Action<AutoBattleUnit> Died;
     public event Action<AutoBattleUnit> AttackHit;
+    public event Action<AutoBattleUnit> ExperienceChanged;
 
     private int idleHash;
     private int runHash;
@@ -42,6 +43,20 @@ public sealed class AutoBattleUnit : MonoBehaviour
     private Coroutine hitLockRoutine;
     private Coroutine deathAfterHitRoutine;
     private bool isHitLocked;
+
+    public void ApplyMonsterData(MonsterData data)
+    {
+        if (data == null)
+        {
+            return;
+        }
+
+        unitName = data.MonsterName;
+        maxHealth = data.MaxHealth;
+        attackPower = data.AttackPower;
+        attackInterval = data.AttackInterval;
+        ResetUnit();
+    }
 
     private void Awake()
     {
@@ -88,6 +103,8 @@ public sealed class AutoBattleUnit : MonoBehaviour
         {
             LevelUp();
         }
+
+        ExperienceChanged?.Invoke(this);
     }
 
     private void LevelUp()

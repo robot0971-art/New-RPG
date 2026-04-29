@@ -6,8 +6,10 @@ public sealed class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public GameState State { get; private set; } = GameState.Booting;
+    public int Gold { get; private set; }
 
     public event Action<GameState> StateChanged;
+    public event Action<int> GoldChanged;
 
     private void Awake()
     {
@@ -62,6 +64,36 @@ public sealed class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SetState(GameState.GameOver);
+    }
+
+    public void AddGold(int amount)
+    {
+        if (amount <= 0)
+        {
+            return;
+        }
+
+        Gold += amount;
+        GoldChanged?.Invoke(Gold);
+        Debug.Log($"[GameManager] Gold +{amount} => {Gold}");
+    }
+
+    public bool TrySpendGold(int amount)
+    {
+        if (amount <= 0)
+        {
+            return true;
+        }
+
+        if (Gold < amount)
+        {
+            return false;
+        }
+
+        Gold -= amount;
+        GoldChanged?.Invoke(Gold);
+        Debug.Log($"[GameManager] Gold -{amount} => {Gold}");
+        return true;
     }
 
     private void SetState(GameState newState)

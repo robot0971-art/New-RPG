@@ -16,12 +16,12 @@ GameObject:
   - component: {fileID: 1705174463299137958}
   - component: {fileID: 1202616073730289224}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: Mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2786163617214859214
 Transform:
   m_ObjectHideFlags: 0

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a09888f1fce3efa4ab1bee79725b93fb, type: 3}
+  m_Name: MushroomData
+  m_EditorClassIdentifier: Assembly-CSharp::MonsterData
+  monsterName: Mushroom
+  prefab: {fileID: 3835026252487277200, guid: 41e710f8948644847a2698800256dd8f, type: 3}
+  maxHealth: 1
+  attackPower: 1
+  attackInterval: 0.5
+  moveSpeed: 1.2
+  expReward: 5
+  goldReward: 10
+  spawnWeight: 1

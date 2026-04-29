@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a09888f1fce3efa4ab1bee79725b93fb, type: 3}
+  m_Name: SlimeData
+  m_EditorClassIdentifier: Assembly-CSharp::MonsterData
+  monsterName: Slime
+  prefab: {fileID: 3907275056397780569, guid: ad4c213b8b1124a489e511f7accdf7f9, type: 3}
+  maxHealth: 6
+  attackPower: 1
+  attackInterval: 0.9
+  moveSpeed: 1
+  expReward: 4
+  goldReward: 8
+  spawnWeight: 1

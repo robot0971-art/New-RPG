@@ -7,6 +7,8 @@ public sealed class AutoBattleController : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private AutoBattleUnit enemyTemplate;
+    [SerializeField] private MonsterData[] monsters;
+    [SerializeField] private int goldReward = 10;
     [SerializeField] private float enemyRespawnDelay = 1.0f;
     [SerializeField] private float enemySpawnOffsetX = 8f;
     [SerializeField] private float attackRange = 2.0f;
@@ -18,6 +20,10 @@ public sealed class AutoBattleController : MonoBehaviour
     [SerializeField] private float impactStartSizeMultiplier = 1.0f;
     [SerializeField] private int impactSortingOrder = 10;
     [SerializeField] private float impactReleaseDelay = 1.0f;
+    [Header("Rewards")]
+    [SerializeField] private GameObject coinDropPrefab;
+    [SerializeField] private Vector3 coinDropOffset = new Vector3(0f, 0.8f, 0f);
+    [SerializeField] private float coinDropReleaseDelay = 0.8f;
     [Range(0f, 0.5f)]
     [SerializeField] private float attackImpactDelay = 0.25f;
     [Range(0f, 2f)]
@@ -29,10 +35,13 @@ public sealed class AutoBattleController : MonoBehaviour
     private AutoBattleSensor2D playerSensor;
     private GameManager gameManager;
 
-    private IObjectPool<AutoBattleUnit> enemyPool;
+    private readonly Dictionary<MonsterData, IObjectPool<AutoBattleUnit>> enemyPools = new();
+    private IObjectPool<AutoBattleUnit> fallbackEnemyPool;
     private IObjectPool<GameObject> impactPool;
+    private IObjectPool<GameObject> coinDropPool;
     private readonly Dictionary<ParticleSystem, float> originalImpactStartSizeMultipliers = new();
     private AutoBattleUnit currentEnemy;
+    private MonsterData currentMonsterData;
     private float playerAttackTimer;
     private float enemyRespawnTimer;
     private bool isFighting;
@@ -53,15 +62,7 @@ public sealed class AutoBattleController : MonoBehaviour
 
     private void Awake()
     {
-        enemyPool = new ObjectPool<AutoBattleUnit>(
-            createFunc: () => Instantiate(enemyTemplate, transform),
-            actionOnGet: (unit) => unit.gameObject.SetActive(true),
-            actionOnRelease: (unit) => unit.gameObject.SetActive(false),
-            actionOnDestroy: (unit) => Destroy(unit.gameObject),
-            collectionCheck: false,
-            defaultCapacity: 5,
-            maxSize: 10
-        );
+        BuildEnemyPools();
 
         impactPool = new ObjectPool<GameObject>(
             createFunc: () => Instantiate(impactPrefab, transform),
@@ -70,6 +71,55 @@ public sealed class AutoBattleController : MonoBehaviour
             actionOnDestroy: Destroy,
             collectionCheck: false,
             defaultCapacity: 5,
+            maxSize: 10
+        );
+
+        coinDropPool = new ObjectPool<GameObject>(
+            createFunc: () => Instantiate(coinDropPrefab, transform),
+            actionOnGet: (coin) => coin.SetActive(true),
+            actionOnRelease: (coin) => coin.SetActive(false),
+            actionOnDestroy: Destroy,
+            collectionCheck: false,
+            defaultCapacity: 5,
+            maxSize: 20
+        );
+    }
+
+    private void BuildEnemyPools()
+    {
+        enemyPools.Clear();
+
+        if (monsters != null)
+        {
+            for (int i = 0; i < monsters.Length; i++)
+            {
+                var monster = monsters[i];
+                if (monster == null || monster.Prefab == null || enemyPools.ContainsKey(monster))
+                {
+                    continue;
+                }
+
+                enemyPools.Add(monster, CreateEnemyPool(monster));
+                monster.Prefab.gameObject.SetActive(false);
+            }
+        }
+
+        if (enemyPools.Count == 0 && enemyTemplate != null)
+        {
+            fallbackEnemyPool = CreateEnemyPool(null);
+        }
+    }
+
+    private IObjectPool<AutoBattleUnit> CreateEnemyPool(MonsterData monster)
+    {
+        var prefab = monster != null ? monster.Prefab : enemyTemplate;
+        return new ObjectPool<AutoBattleUnit>(
+            createFunc: () => Instantiate(prefab, transform),
+            actionOnGet: (unit) => unit.gameObject.SetActive(true),
+            actionOnRelease: (unit) => unit.gameObject.SetActive(false),
+            actionOnDestroy: (unit) => Destroy(unit.gameObject),
+            collectionCheck: false,
+            defaultCapacity: 3,
             maxSize: 10
         );
     }
@@ -237,7 +287,9 @@ public sealed class AutoBattleController : MonoBehaviour
             if (currentEnemy.IsDead)
             {
                 Debug.Log($"<color=cyan>[BattleCtrl] ENEMY DEFEATED! enemy HP=0, respawnTimer={enemyRespawnDelay}s</color>");
-                player.GainExp(5f);
+                PlayCoinDrop(currentEnemy.transform.position + coinDropOffset);
+                gameManager?.AddGold(currentMonsterData != null ? currentMonsterData.GoldReward : goldReward);
+                player.GainExp(currentMonsterData != null ? currentMonsterData.ExpReward : 5f);
                 StartCoroutine(ReleaseEnemyAfterDelay());
             }
         }
@@ -288,6 +340,29 @@ public sealed class AutoBattleController : MonoBehaviour
         }
     }
 
+    private void PlayCoinDrop(Vector3 position)
+    {
+        if (coinDropPrefab == null || coinDropPool == null)
+        {
+            return;
+        }
+
+        var coin = coinDropPool.Get();
+        coin.transform.position = position;
+        coin.transform.rotation = Quaternion.identity;
+        StartCoroutine(ReleaseCoinDropAfterDelay(coin));
+    }
+
+    private IEnumerator ReleaseCoinDropAfterDelay(GameObject coin)
+    {
+        yield return new WaitForSeconds(coinDropReleaseDelay);
+
+        if (coin != null)
+        {
+            coinDropPool.Release(coin);
+        }
+    }
+
     private IEnumerator ReleaseEnemyAfterDelay()
     {
         if (enemyDeathReleaseDelay > 0f)
@@ -320,14 +395,31 @@ public sealed class AutoBattleController : MonoBehaviour
         var nextPosition = Vector3.MoveTowards(
             enemyTransform.position,
             targetPosition,
-            moveSpeed * Time.deltaTime);
+            GetCurrentMoveSpeed() * Time.deltaTime);
 
         enemyTransform.position = nextPosition;
     }
 
+    private float GetCurrentMoveSpeed()
+    {
+        return currentMonsterData != null ? currentMonsterData.MoveSpeed : moveSpeed;
+    }
+
     private void SpawnEnemy()
     {
-        currentEnemy = enemyPool.Get();
+        currentMonsterData = SelectMonster();
+        var selectedPool = currentMonsterData != null && enemyPools.TryGetValue(currentMonsterData, out var monsterPool)
+            ? monsterPool
+            : fallbackEnemyPool;
+
+        if (selectedPool == null)
+        {
+            Debug.LogWarning("[BattleCtrl] No enemy pool is available.");
+            return;
+        }
+
+        currentEnemy = selectedPool.Get();
+        currentEnemy.ApplyMonsterData(currentMonsterData);
         
         // enemySpawnOffsetX가 attackRange보다 작으면 적이 스폰되자마자 전투 시작됨
         float actualOffset = Mathf.Max(enemySpawnOffsetX, attackRange + 3f);
@@ -337,7 +429,7 @@ public sealed class AutoBattleController : MonoBehaviour
         }
         
         currentEnemy.transform.position = player.transform.position + Vector3.right * actualOffset;
-        currentEnemy.name = "Enemy_" + Time.frameCount;
+        currentEnemy.name = (currentMonsterData != null ? currentMonsterData.MonsterName : "Enemy") + "_" + Time.frameCount;
         currentEnemy.ResetUnit();
         currentEnemy.PlayIdle();
         isFighting = false;
@@ -346,12 +438,65 @@ public sealed class AutoBattleController : MonoBehaviour
         Debug.Log($"<color=yellow>[BattleCtrl] Spawned {currentEnemy.name} at offset {actualOffset}, attackRange={attackRange}</color>");
     }
 
+    private MonsterData SelectMonster()
+    {
+        if (monsters == null || monsters.Length == 0)
+        {
+            return null;
+        }
+
+        int totalWeight = 0;
+        for (int i = 0; i < monsters.Length; i++)
+        {
+            if (monsters[i] != null && monsters[i].Prefab != null)
+            {
+                totalWeight += monsters[i].SpawnWeight;
+            }
+        }
+
+        if (totalWeight <= 0)
+        {
+            return null;
+        }
+
+        int roll = Random.Range(0, totalWeight);
+        for (int i = 0; i < monsters.Length; i++)
+        {
+            var monster = monsters[i];
+            if (monster == null || monster.Prefab == null)
+            {
+                continue;
+            }
+
+            roll -= monster.SpawnWeight;
+            if (roll < 0)
+            {
+                return monster;
+            }
+        }
+
+        return null;
+    }
+
     private void ReleaseCurrentEnemy()
     {
         if (currentEnemy != null)
         {
-            enemyPool.Release(currentEnemy);
+            var selectedPool = currentMonsterData != null && enemyPools.TryGetValue(currentMonsterData, out var monsterPool)
+                ? monsterPool
+                : fallbackEnemyPool;
+
+            if (selectedPool != null)
+            {
+                selectedPool.Release(currentEnemy);
+            }
+            else
+            {
+                Destroy(currentEnemy.gameObject);
+            }
+
             currentEnemy = null;
+            currentMonsterData = null;
         }
         isAttackResolving = false;
         if (playerSensor != null) playerSensor.ClearTarget();
