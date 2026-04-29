@@ -1,0 +1,61 @@
+using UnityEngine;
+
+[RequireComponent(typeof(Collider2D))]
+public sealed class AutoBattleSensor2D : MonoBehaviour
+{
+    [SerializeField] private LayerMask targetLayers;
+
+    public AutoBattleUnit CurrentTarget { get; private set; }
+
+    public void ClearTarget()
+    {
+        CurrentTarget = null;
+    }
+
+    private void Reset()
+    {
+        var trigger = GetComponent<Collider2D>();
+        trigger.isTrigger = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log($"[Sensor] Object detected: {other.name} on layer {LayerMask.LayerToName(other.gameObject.layer)}");
+
+        if (!IsInTargetLayer(other.gameObject.layer))
+        {
+            Debug.Log($"[Sensor] {other.name} is not in Target Layer mask.");
+            return;
+        }
+
+        var target = other.GetComponent<AutoBattleUnit>();
+        if (target == null)
+        {
+            Debug.Log($"[Sensor] {other.name} does not have AutoBattleUnit component.");
+            return;
+        }
+
+        CurrentTarget = target;
+        Debug.Log($"<color=green>[Sensor] Target SET to {target.UnitName}</color>");
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (CurrentTarget == null)
+        {
+            return;
+        }
+
+        if (other.GetComponent<AutoBattleUnit>() != CurrentTarget)
+        {
+            return;
+        }
+
+        CurrentTarget = null;
+    }
+
+    private bool IsInTargetLayer(int layer)
+    {
+        return (targetLayers.value & (1 << layer)) != 0;
+    }
+}

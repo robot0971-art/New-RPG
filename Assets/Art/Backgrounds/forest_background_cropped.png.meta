@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: b4d0c22cd5a081349b2950bf6eb196ac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5649114884559452719
+    second: forest_background_cropped_0
+  - first:
+      213: -8820026198304918205
+    second: forest_background_cropped_1
+  - first:
+      213: 663454455040754133
+    second: forest_background_cropped_2
+  - first:
+      213: -8138986593347918430
+    second: forest_background_cropped_3
+  - first:
+      213: 409984939764532262
+    second: forest_background_cropped_4
+  - first:
+      213: 1387932843872476000
+    second: forest_background_cropped_5
+  - first:
+      213: 944542340273535068
+    second: forest_background_cropped_6
+  - first:
+      213: -3934672282889822616
+    second: forest_background_cropped_7
+  - first:
+      213: -9057052586773139992
+    second: forest_background_cropped_8
+  - first:
+      213: 8866449386925819628
+    second: forest_background_cropped_9
+  - first:
+      213: -6229012136298833696
+    second: forest_background_cropped_10
+  - first:
+      213: -2011037637443683568
+    second: forest_background_cropped_11
+  - first:
+      213: -8183237109622144752
+    second: forest_background_cropped_12
+  - first:
+      213: 6390429869682872241
+    second: forest_background_cropped_13
+  - first:
+      213: 1285300671115407851
+    second: forest_background_cropped_14
+  - first:
+      213: 5734558752676714967
+    second: forest_background_cropped_15
+  - first:
+      213: -8878964993757708935
+    second: forest_background_cropped_16
+  - first:
+      213: 753981360395381164
+    second: forest_background_cropped_17
+  - first:
+      213: 7430367329718202174
+    second: forest_background_cropped_18
+  - first:
+      213: -704540753448331525
+    second: forest_background_cropped_19
+  - first:
+      213: 2418202155039791425
+    second: forest_background_cropped_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: forest_background_cropped_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 154
+        width: 1543
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2ab985ae00b56e40800000000000000
+      internalID: 5649114884559452719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 345756437e8f89580800000000000000
+      internalID: -8820026198304918205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1ca5dcf40153900800000000000000
+      internalID: 663454455040754133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a5a4d7c0d28c0f80800000000000000
+      internalID: -8138986593347918430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_4
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 0
+        width: 91
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624cce9612f80b500800000000000000
+      internalID: 409984939764532262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_5
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06bdd13619de24310800000000000000
+      internalID: 1387932843872476000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_6
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 0
+        width: 97
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c58f15b0140bb1d00800000000000000
+      internalID: 944542340273535068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_7
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 0
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ed6cec76c3569c0800000000000000
+      internalID: -3934672282889822616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_8
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 0
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8edaa5d98a2ee4280800000000000000
+      internalID: -9057052586773139992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_9
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 0
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce681beadb4fb0b70800000000000000
+      internalID: 8866449386925819628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_10
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e89f4af67a1e89a0800000000000000
+      internalID: -6229012136298833696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_11
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 0
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01b7a367ceb5714e0800000000000000
+      internalID: -2011037637443683568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_12
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 0
+        width: 68
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0118d28943d4f6e80800000000000000
+      internalID: -8183237109622144752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_13
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 0
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf4e78cb1e5fa850800000000000000
+      internalID: 6390429869682872241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_14
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 3
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1b76b862e46d110800000000000000
+      internalID: 1285300671115407851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_15
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 0
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d917e47dce359f40800000000000000
+      internalID: 5734558752676714967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_16
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 0
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d71f5816497c480800000000000000
+      internalID: -8878964993757708935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_17
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 0
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9e1a17d0ea67a00800000000000000
+      internalID: 753981360395381164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_18
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 0
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f6586f7b7fd1760800000000000000
+      internalID: 7430367329718202174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_19
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 0
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf61de4eae7f836f0800000000000000
+      internalID: -704540753448331525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest_background_cropped_20
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 0
+        width: 63
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1491b3e3c0e2f8120800000000000000
+      internalID: 2418202155039791425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      forest_background_cropped_0: 5649114884559452719
+      forest_background_cropped_1: -8820026198304918205
+      forest_background_cropped_10: -6229012136298833696
+      forest_background_cropped_11: -2011037637443683568
+      forest_background_cropped_12: -8183237109622144752
+      forest_background_cropped_13: 6390429869682872241
+      forest_background_cropped_14: 1285300671115407851
+      forest_background_cropped_15: 5734558752676714967
+      forest_background_cropped_16: -8878964993757708935
+      forest_background_cropped_17: 753981360395381164
+      forest_background_cropped_18: 7430367329718202174
+      forest_background_cropped_19: -704540753448331525
+      forest_background_cropped_2: 663454455040754133
+      forest_background_cropped_20: 2418202155039791425
+      forest_background_cropped_3: -8138986593347918430
+      forest_background_cropped_4: 409984939764532262
+      forest_background_cropped_5: 1387932843872476000
+      forest_background_cropped_6: 944542340273535068
+      forest_background_cropped_7: -3934672282889822616
+      forest_background_cropped_8: -9057052586773139992
+      forest_background_cropped_9: 8866449386925819628
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
