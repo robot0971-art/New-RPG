@@ -22,6 +22,7 @@ public sealed class AutoBattleController : MonoBehaviour
     [SerializeField] private float impactReleaseDelay = 1.0f;
     [Header("Rewards")]
     [SerializeField] private GameObject coinDropPrefab;
+    [SerializeField] private RectTransform coinUITarget;
     [SerializeField] private Vector3 coinDropOffset = new Vector3(0f, 0.8f, 0f);
     [SerializeField] private float coinDropReleaseDelay = 0.8f;
     [Range(0f, 0.5f)]
@@ -88,6 +89,7 @@ public sealed class AutoBattleController : MonoBehaviour
     private void BuildEnemyPools()
     {
         enemyPools.Clear();
+        Debug.Log($"[BattleCtrl] BuildEnemyPools START - monsters.Length={monsters?.Length ?? 0}");
 
         if (monsters != null)
         {
@@ -96,17 +98,22 @@ public sealed class AutoBattleController : MonoBehaviour
                 var monster = monsters[i];
                 if (monster == null || monster.Prefab == null || enemyPools.ContainsKey(monster))
                 {
+                    Debug.LogWarning($"[BattleCtrl] Skipping monster[{i}]={monster?.MonsterName ?? "NULL"}, prefab={(monster?.Prefab != null ? "OK" : "NULL")}, contains={enemyPools.ContainsKey(monster)}");
                     continue;
                 }
 
                 enemyPools.Add(monster, CreateEnemyPool(monster));
+                Debug.Log($"[BattleCtrl] Added pool for {monster.MonsterName}");
                 monster.Prefab.gameObject.SetActive(false);
             }
         }
 
+        Debug.Log($"[BattleCtrl] BuildEnemyPools END - poolCount={enemyPools.Count}");
+        
         if (enemyPools.Count == 0 && enemyTemplate != null)
         {
             fallbackEnemyPool = CreateEnemyPool(null);
+            Debug.Log($"[BattleCtrl] Created fallback pool");
         }
     }
 
@@ -127,6 +134,14 @@ public sealed class AutoBattleController : MonoBehaviour
     private void Start()
     {
         TryResolveDependencies();
+
+        Debug.Log($"<color=yellow>[BattleCtrl] monsters.Length={monsters?.Length ?? 0}</color>");
+        for (int i = 0; i < (monsters?.Length ?? 0); i++)
+        {
+            var m = monsters[i];
+            Debug.Log($"<color=yellow>[BattleCtrl] monsters[{i}]={m?.MonsterName ?? "NULL"}, prefab={(m?.Prefab != null ? m.Prefab.name : "NULL")}, weight={m?.SpawnWeight}</color>");
+        }
+
         Debug.Log($"<color=yellow>[BattleCtrl] Start BEGIN - player={(player != null ? player.name : "NULL")}, sensor={(playerSensor != null ? playerSensor.name : "NULL")}, sensorTarget={(playerSensor?.CurrentTarget != null ? playerSensor.CurrentTarget.name : "NULL")}</color>");
         if (enemyTemplate != null)
         {
@@ -178,7 +193,7 @@ public sealed class AutoBattleController : MonoBehaviour
             enemyRespawnTimer -= Time.deltaTime;
             if (enemyRespawnTimer <= 0f)
             {
-                Debug.Log($"<color=orange>[BattleCtrl] Section1 - Respawning enemy (timer={enemyRespawnTimer:F2})</color>");
+                Debug.Log($"[BattleCtrl] Update - timer expired, calling SpawnEnemy (timer={enemyRespawnTimer:F2})");
                 SpawnEnemy();
             }
             return;
@@ -189,7 +204,7 @@ public sealed class AutoBattleController : MonoBehaviour
         // 2. 아직 전투 시작 전이면 적에게 접근
         if (!isFighting)
         {
-            float distance = Vector3.Distance(player.transform.position, currentEnemy.transform.position);
+            float distance = Mathf.Abs(player.transform.position.x - currentEnemy.transform.position.x);
             bool inRange = distance <= attackRange;
 
             if (inRange)
@@ -288,7 +303,6 @@ public sealed class AutoBattleController : MonoBehaviour
             {
                 Debug.Log($"<color=cyan>[BattleCtrl] ENEMY DEFEATED! enemy HP=0, respawnTimer={enemyRespawnDelay}s</color>");
                 PlayCoinDrop(currentEnemy.transform.position + coinDropOffset);
-                gameManager?.AddGold(currentMonsterData != null ? currentMonsterData.GoldReward : goldReward);
                 player.GainExp(currentMonsterData != null ? currentMonsterData.ExpReward : 5f);
                 StartCoroutine(ReleaseEnemyAfterDelay());
             }
@@ -348,9 +362,22 @@ public sealed class AutoBattleController : MonoBehaviour
         }
 
         var coin = coinDropPool.Get();
-        coin.transform.position = position;
         coin.transform.rotation = Quaternion.identity;
-        StartCoroutine(ReleaseCoinDropAfterDelay(coin));
+
+        var coinDrop = coin.GetComponent<CoinDrop>();
+        if (coinDrop == null)
+        {
+            coin.transform.position = position;
+            StartCoroutine(ReleaseCoinDropAfterDelay(coin));
+            return;
+        }
+
+        coinDrop.CoinUITarget = coinUITarget;
+        coinDrop.GoldAmount = currentMonsterData != null ? currentMonsterData.GoldReward : goldReward;
+        coinDrop.Pool = coinDropPool;
+
+        float groundY = player != null ? player.transform.position.y : 0f;
+        coinDrop.Play(position, groundY);
     }
 
     private IEnumerator ReleaseCoinDropAfterDelay(GameObject coin)
@@ -384,7 +411,7 @@ public sealed class AutoBattleController : MonoBehaviour
 
         var playerTransform = player.transform;
         var enemyTransform = currentEnemy.transform;
-        var targetPosition = playerTransform.position;
+        var targetPosition = new Vector3(playerTransform.position.x, enemyTransform.position.y, enemyTransform.position.z);
         var direction = enemyTransform.position - targetPosition;
         if (direction.sqrMagnitude <= attackRange * attackRange)
         {
@@ -407,21 +434,34 @@ public sealed class AutoBattleController : MonoBehaviour
 
     private void SpawnEnemy()
     {
+        Debug.Log($"[BattleCtrl] SpawnEnemy START");
+
         currentMonsterData = SelectMonster();
+        Debug.Log($"[BattleCtrl] Selected monster: {currentMonsterData?.MonsterName ?? "NULL"}");
+
         var selectedPool = currentMonsterData != null && enemyPools.TryGetValue(currentMonsterData, out var monsterPool)
             ? monsterPool
             : fallbackEnemyPool;
 
+        Debug.Log($"[BattleCtrl] Using pool: {(selectedPool != null ? (selectedPool == fallbackEnemyPool ? "fallback" : currentMonsterData?.MonsterName) : "NULL")}");
+
         if (selectedPool == null)
         {
-            Debug.LogWarning("[BattleCtrl] No enemy pool is available.");
+            Debug.LogError("[BattleCtrl] No enemy pool is available.");
             return;
         }
 
         currentEnemy = selectedPool.Get();
+        Debug.Log($"[BattleCtrl] Got enemy from pool: {currentEnemy?.name ?? "NULL"}");
+
+        if (currentEnemy == null)
+        {
+            Debug.LogError("[BattleCtrl] Failed to get enemy from pool!");
+            return;
+        }
+
         currentEnemy.ApplyMonsterData(currentMonsterData);
         
-        // enemySpawnOffsetX가 attackRange보다 작으면 적이 스폰되자마자 전투 시작됨
         float actualOffset = Mathf.Max(enemySpawnOffsetX, attackRange + 3f);
         if (enemySpawnOffsetX < attackRange + 1f)
         {
@@ -451,6 +491,7 @@ public sealed class AutoBattleController : MonoBehaviour
     {
         if (monsters == null || monsters.Length == 0)
         {
+            Debug.LogWarning("[BattleCtrl] SelectMonster - monsters array is NULL or empty!");
             return null;
         }
 
@@ -461,14 +502,23 @@ public sealed class AutoBattleController : MonoBehaviour
             {
                 totalWeight += monsters[i].SpawnWeight;
             }
+            else
+            {
+                Debug.LogWarning($"[BattleCtrl] SelectMonster - monsters[{i}] invalid: name={monsters[i]?.MonsterName ?? "NULL"}, prefab={(monsters[i]?.Prefab != null ? "OK" : "NULL")}");
+            }
         }
+
+        Debug.Log($"[BattleCtrl] SelectMonster - totalWeight={totalWeight}");
 
         if (totalWeight <= 0)
         {
+            Debug.LogError("[BattleCtrl] SelectMonster - totalWeight is 0!");
             return null;
         }
 
         int roll = Random.Range(0, totalWeight);
+        Debug.Log($"[BattleCtrl] SelectMonster - roll={roll} (range: 0-{totalWeight - 1})");
+
         for (int i = 0; i < monsters.Length; i++)
         {
             var monster = monsters[i];
@@ -480,10 +530,12 @@ public sealed class AutoBattleController : MonoBehaviour
             roll -= monster.SpawnWeight;
             if (roll < 0)
             {
+                Debug.Log($"[BattleCtrl] SelectMonster - selected {monster.MonsterName}");
                 return monster;
             }
         }
 
+        Debug.LogWarning("[BattleCtrl] SelectMonster - no monster selected!");
         return null;
     }
 

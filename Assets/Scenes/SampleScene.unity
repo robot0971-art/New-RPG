@@ -1474,9 +1474,10 @@ MonoBehaviour:
   enemyTemplate: {fileID: 877604521}
   monsters:
   - {fileID: 11400000, guid: bf280b3355ee08b459276f4bef5badb2, type: 2}
-  - {fileID: 11400000, guid: bb051c48534d4b249aee04eb5f1394c6, type: 2}
-  - {fileID: 11400000, guid: 49576801233840747aeb01d67e981e5a, type: 2}
   - {fileID: 11400000, guid: effa4f5dd33bd5a4fb5fda1af8d97cc9, type: 2}
+  - {fileID: 11400000, guid: 9dc65477c8244fcea61e77e17eea398b, type: 2}
+  - {fileID: 11400000, guid: be8fff92dd3649eb87b5a61d9280c4ee, type: 2}
+  - {fileID: 11400000, guid: 4fd5c39b8d264523b43b6f86dac44e89, type: 2}
   goldReward: 10
   enemyRespawnDelay: 1.5
   enemySpawnOffsetX: 4.38

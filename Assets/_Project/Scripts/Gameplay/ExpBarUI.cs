@@ -8,6 +8,7 @@ public sealed class ExpBarUI : MonoBehaviour
     [SerializeField] private Image expFillImage;
     [SerializeField] private RectTransform backgroundRect;
     [SerializeField] private RectTransform fillAreaRect;
+    [SerializeField] private bool applyFillAreaLayout;
     [SerializeField] private Vector4 fillAreaPadding;
     [SerializeField] private Vector2 fillAreaOffset;
     [SerializeField] private float debugFillAmount = -1f;
@@ -64,7 +65,10 @@ public sealed class ExpBarUI : MonoBehaviour
             }
         }
 
-        ApplyFillAreaLayout();
+        if (applyFillAreaLayout)
+        {
+            ApplyFillAreaLayout();
+        }
 
         if (expSlider != null && expFillImage != null)
         {

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SlimeData
   m_EditorClassIdentifier: Assembly-CSharp::MonsterData
   monsterName: Slime
-  prefab: {fileID: 3907275056397780569, guid: ad4c213b8b1124a489e511f7accdf7f9, type: 3}
+  prefab: {fileID: 6522446126105805153, guid: ad4c213b8b1124a489e511f7accdf7f9, type: 3}
   maxHealth: 6
   attackPower: 1
   attackInterval: 0.9
@@ -21,3 +21,6 @@ MonoBehaviour:
   expReward: 4
   goldReward: 8
   spawnWeight: 1
+  spawnYOffset: -0.3
+  spawnZOffset: 0
+  spawnRotation: {x: 0, y: 0, z: 0}

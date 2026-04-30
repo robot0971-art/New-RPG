@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2184726779647263490
 Transform:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ Animator:
   m_GameObject: {fileID: 4849616089694388461}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5d828627e770af540bf744b58ea5d64f, type: 2}
+  m_Controller: {fileID: 9100000, guid: a2a64eedd0f47fa4fab7742b45b5665d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -133,9 +133,9 @@ MonoBehaviour:
   maxHealth: 1
   attackPower: 1
   attackInterval: 0.5
-  animator: {fileID: 0}
+  animator: {fileID: 5703304401930850135}
   idleStateName: Idle
-  runStateName: Run
+  runStateName: Idle
   attackStateName: Attack
   hitStateName: Hit
   deathStateName: Death

@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 341365264146619597}
   - component: {fileID: 633539628471010111}
   - component: {fileID: 1789242319299274251}
+  - component: {fileID: 5094119830847328973}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -242,7 +243,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -308,3 +309,20 @@ MonoBehaviour:
   hitStateName: Hit
   deathStateName: Death
   hitLockDuration: 0.4
+--- !u!114 &5094119830847328973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3913212642840663471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9764f614d4ad945831fa679c050eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerLevelUpEffect
+  player: {fileID: 1789242319299274251}
+  levelUpEffectPrefab: {fileID: 3732551427800355369, guid: 3e2226b0718f88b40ad98d970390f416, type: 3}
+  offset: {x: 0, y: 0, z: 0}
+  parentToPlayer: 1
+  destroyDelay: 2

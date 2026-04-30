@@ -33,6 +33,7 @@ public sealed class AutoBattleUnit : MonoBehaviour
     public event Action<AutoBattleUnit> Died;
     public event Action<AutoBattleUnit> AttackHit;
     public event Action<AutoBattleUnit> ExperienceChanged;
+    public event Action<int> LevelChanged;
 
     private int idleHash;
     private int runHash;
@@ -114,6 +115,7 @@ public sealed class AutoBattleUnit : MonoBehaviour
         attackPower += 2f;
         maxHealth += 5f;
         CurrentHealth = maxHealth;
+        LevelChanged?.Invoke(Level);
         Debug.Log($"<color=yellow>[Level Up]</color> {unitName} Level {Level}! ATK: {attackPower}");
     }
 
