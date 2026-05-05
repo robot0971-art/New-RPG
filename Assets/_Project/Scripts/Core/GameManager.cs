@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public sealed class GameManager : MonoBehaviour
+public sealed class GameManager : MonoBehaviour, ISaveable
 {
     public static GameManager Instance { get; private set; }
 
@@ -93,7 +93,34 @@ public sealed class GameManager : MonoBehaviour
         Gold -= amount;
         GoldChanged?.Invoke(Gold);
         Debug.Log($"[GameManager] Gold -{amount} => {Gold}");
+        SaveEvents.RequestSave();
         return true;
+    }
+
+    public void SetGold(int value)
+    {
+        Gold = Mathf.Max(0, value);
+        GoldChanged?.Invoke(Gold);
+    }
+
+    public void CaptureSaveData(SaveData saveData)
+    {
+        if (saveData == null)
+        {
+            return;
+        }
+
+        saveData.gold = Gold;
+    }
+
+    public void RestoreSaveData(SaveData saveData)
+    {
+        if (saveData == null)
+        {
+            return;
+        }
+
+        SetGold(saveData.gold);
     }
 
     private void SetState(GameState newState)
