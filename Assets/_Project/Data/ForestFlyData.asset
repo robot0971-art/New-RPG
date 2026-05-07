@@ -22,5 +22,6 @@ MonoBehaviour:
   goldReward: 8
   spawnWeight: 1
   spawnYOffset: 0
+  bossSpawnYOffset: 0
   spawnZOffset: 0
   spawnRotation: {x: 0, y: 0, z: 0}

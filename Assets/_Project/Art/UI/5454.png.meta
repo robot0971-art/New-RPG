@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 53ab695898ae6ef4b97206dfd131feba
+guid: e3bd2e33e3b05044dbb692318177103a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1313173346634014833
-    second: "ChatGPT Image 2026\uB144 5\uC6D4 2\uC77C \uC624\uC804 10_23_16_0"
+      213: 5050612685233450770
+    second: 5454_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,27 +96,40 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "ChatGPT Image 2026\uB144 5\uC6D4 2\uC77C \uC624\uC804 10_23_16_0"
+      name: 5454_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 0
-        width: 1502
-        height: 1024
+        x: 774
+        y: 442
+        width: 727
+        height: 603
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 331, y: 237, z: 340, w: 256}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8f5e597ccba6cde0800000000000000
-      internalID: -1313173346634014833
+      spriteID: 21feb695a71671640800000000000000
+      internalID: 5050612685233450770
       vertices: []
       indices: 
       edges: []
@@ -125,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4335ec7f5d1c04d4f80a59798b6f5210
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "ChatGPT Image 2026\uB144 5\uC6D4 2\uC77C \uC624\uC804 10_23_16_0": -1313173346634014833
+      5454_0: 5050612685233450770
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

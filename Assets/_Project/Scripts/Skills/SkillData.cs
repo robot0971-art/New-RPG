@@ -1,13 +1,14 @@
-using System;
 using UnityEngine;
 
-[Serializable]
-public sealed class SkillData
+[CreateAssetMenu(menuName = "Game Data/Skill", fileName = "New Skill")]
+public sealed class SkillData : ScriptableObject
 {
     public SkillType skillType;
     public SkillEffectType effectType;
     public string displayName = "Skill";
+    public Sprite icon;
     public int requiredLevel = 1;
+    public float manaCost = 10f;
     public float cooldown = 5f;
     public float damageMultiplier = 2f;
     public float healPercent = 30f;

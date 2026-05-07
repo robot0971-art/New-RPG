@@ -80,6 +80,22 @@ public sealed class AutoBattleUnit : MonoBehaviour, ISaveable
         ResetUnit();
     }
 
+    public void ApplyRuntimeBattleModifiers(string nameSuffix, float healthMultiplier, float attackMultiplier, float attackIntervalMultiplier)
+    {
+        if (!string.IsNullOrWhiteSpace(nameSuffix))
+        {
+            unitName = $"{unitName} {nameSuffix}";
+        }
+
+        maxHealth = Mathf.Max(1f, maxHealth * Mathf.Max(0.01f, healthMultiplier));
+        attackPower = Mathf.Max(0f, attackPower * Mathf.Max(0f, attackMultiplier));
+        attackInterval = Mathf.Max(0.1f, attackInterval * Mathf.Max(0.01f, attackIntervalMultiplier));
+        baseAttackPower = attackPower;
+        baseMaxHealth = maxHealth;
+        baseAttackInterval = attackInterval;
+        CurrentHealth = maxHealth;
+    }
+
     public void ApplyStatUpgrades(
         float upgradedAttackPower,
         float upgradedAttackSpeed,

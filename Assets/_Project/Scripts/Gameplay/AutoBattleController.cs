@@ -22,10 +22,8 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
     [SerializeField] private float impactReleaseDelay = 1.0f;
 
     [Header("Rewards")]
-    [SerializeField] private GameObject coinDropPrefab;
-    [SerializeField] private RectTransform coinUITarget;
+    [SerializeField] private CoinDropRewardSpawner coinRewardSpawner;
     [SerializeField] private Vector3 coinDropOffset = new Vector3(0f, 0.8f, 0f);
-    [SerializeField] private float coinDropReleaseDelay = 0.8f;
 
     [Header("Timing")]
     [Range(0f, 0.5f)]
@@ -41,12 +39,12 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
     [SerializeField] private ParallaxBackground2D parallaxBackground;
     private AutoBattleSensor2D playerSensor;
     private GameManager gameManager;
+    private StageManager stageManager;
 
     private readonly Dictionary<MonsterData, IObjectPool<AutoBattleUnit>> enemyPools = new Dictionary<MonsterData, IObjectPool<AutoBattleUnit>>();
     private readonly Dictionary<ParticleSystem, float> originalImpactStartSizeMultipliers = new Dictionary<ParticleSystem, float>();
     private IObjectPool<AutoBattleUnit> fallbackEnemyPool;
     private IObjectPool<GameObject> impactPool;
-    private IObjectPool<GameObject> coinDropPool;
     private AutoBattleUnit currentEnemy;
     private MonsterData currentMonsterData;
     private float playerAttackTimer;
@@ -55,10 +53,29 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
     private bool isAttackResolving;
     private bool playerAttackEventReceived;
     private bool isEnemyDefeatHandled;
+    private bool pendingBossSpawn;
+    private bool currentEnemyIsBoss;
+    private Vector3 currentEnemyBaseScale = Vector3.one;
 
     public AutoBattleUnit Player => player;
     public AutoBattleUnit CurrentEnemy => currentEnemy;
     public event System.Action<AutoBattleUnit, AutoBattleUnit> PlayerAttackResolved;
+
+    public bool StartBossBattle()
+    {
+        TryResolveDependencies();
+        if (stageManager == null || !stageManager.BossAvailable || stageManager.BossBattleActive)
+        {
+            return false;
+        }
+
+        StopAllCoroutines();
+        ReleaseCurrentEnemy();
+        pendingBossSpawn = true;
+        enemyRespawnTimer = 0f;
+        SpawnEnemy();
+        return currentEnemy != null && currentEnemyIsBoss;
+    }
 
     public void GetEnemiesInRadius(Vector3 position, float radius, List<AutoBattleUnit> results)
     {
@@ -292,16 +309,6 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
             defaultCapacity: 5,
             maxSize: 10
         );
-
-        coinDropPool = new ObjectPool<GameObject>(
-            createFunc: () => Instantiate(coinDropPrefab, transform),
-            actionOnGet: (coin) => coin.SetActive(true),
-            actionOnRelease: (coin) => coin.SetActive(false),
-            actionOnDestroy: Destroy,
-            collectionCheck: false,
-            defaultCapacity: 5,
-            maxSize: 20
-        );
     }
 
     private void TryResolveDependencies()
@@ -324,6 +331,26 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
         if (gameManager == null)
         {
             gameManager = DIContainer.Global.Resolve<GameManager>();
+        }
+
+        if (stageManager == null)
+        {
+            stageManager = DIContainer.Global.Resolve<StageManager>();
+        }
+
+        if (stageManager == null)
+        {
+            stageManager = FindFirstObjectByType<StageManager>();
+        }
+
+        if (coinRewardSpawner == null)
+        {
+            coinRewardSpawner = GetComponent<CoinDropRewardSpawner>();
+        }
+
+        if (coinRewardSpawner == null)
+        {
+            coinRewardSpawner = FindFirstObjectByType<CoinDropRewardSpawner>();
         }
 
         if (parallaxBackground == null)
@@ -413,8 +440,9 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
 
         isEnemyDefeatHandled = true;
         Log($"Enemy defeated. respawnTimer={enemyRespawnDelay}s");
-        PlayCoinDrop(currentEnemy.transform.position + coinDropOffset);
+        PlayRewardCoins(currentEnemy.transform.position + coinDropOffset);
         player.GainExp(GetExpReward());
+        stageManager?.NotifyEnemyDefeated(currentEnemyIsBoss);
         StartCoroutine(ReleaseEnemyAfterDelay());
     }
 
@@ -486,40 +514,31 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
         }
     }
 
-    private void PlayCoinDrop(Vector3 position)
+    private void PlayRewardCoins(Vector3 position)
     {
-        if (coinDropPrefab == null || coinDropPool == null)
+        if (coinRewardSpawner == null)
         {
-            return;
+            TryResolveDependencies();
         }
 
-        var coin = coinDropPool.Get();
-        coin.transform.rotation = Quaternion.identity;
-
-        var coinDrop = coin.GetComponent<CoinDrop>();
-        if (coinDrop == null)
+        if (coinRewardSpawner == null)
         {
-            coin.transform.position = position;
-            StartCoroutine(ReleaseCoinDropAfterDelay(coin));
+            LogWarning("CoinRewardSpawner is missing. Gold reward was not dropped.");
             return;
         }
-
-        SetupCoinDrop(coinDrop);
 
         float groundY = player != null ? player.transform.position.y : 0f;
-        coinDrop.Play(position, groundY);
-    }
-
-    private void SetupCoinDrop(CoinDrop coinDrop)
-    {
-        coinDrop.CoinUITarget = coinUITarget;
-        coinDrop.GoldAmount = GetGoldReward();
-        coinDrop.Pool = coinDropPool;
+        coinRewardSpawner.PlayReward(position, groundY, GetGoldReward(), currentEnemyIsBoss);
     }
 
     private int GetGoldReward()
     {
         int baseGoldReward = currentMonsterData != null ? currentMonsterData.GoldReward : goldReward;
+        if (currentEnemyIsBoss)
+        {
+            baseGoldReward *= 5;
+        }
+
         float bonusPercent = player != null ? player.TotalGoldBonusPercent : 0f;
         return Mathf.CeilToInt(GetRewardWithBonus(baseGoldReward, bonusPercent));
     }
@@ -527,6 +546,11 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
     private float GetExpReward()
     {
         float baseExpReward = currentMonsterData != null ? currentMonsterData.ExpReward : 5f;
+        if (currentEnemyIsBoss)
+        {
+            baseExpReward *= 5f;
+        }
+
         float bonusPercent = player != null ? player.ExpBonusPercent : 0f;
         return GetRewardWithBonus(baseExpReward, bonusPercent);
     }
@@ -534,16 +558,6 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
     private float GetRewardWithBonus(float baseReward, float bonusPercent)
     {
         return Mathf.Max(0f, baseReward * (1f + bonusPercent / 100f));
-    }
-
-    private IEnumerator ReleaseCoinDropAfterDelay(GameObject coin)
-    {
-        yield return new WaitForSeconds(coinDropReleaseDelay);
-
-        if (coin != null)
-        {
-            coinDropPool.Release(coin);
-        }
     }
 
     private IEnumerator ReleaseEnemyAfterDelay()
@@ -588,7 +602,8 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
 
     private void SpawnEnemy()
     {
-        currentMonsterData = SelectMonster();
+        currentEnemyIsBoss = pendingBossSpawn;
+        currentMonsterData = currentEnemyIsBoss ? SelectBossMonster() : SelectMonster();
         var selectedPool = GetSelectedEnemyPool(currentMonsterData);
 
         if (selectedPool == null)
@@ -605,6 +620,7 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
         }
 
         SetupSpawnedEnemy(currentEnemy, currentMonsterData);
+        pendingBossSpawn = false;
         ResetFightState();
         Log($"Spawned {currentEnemy.name} at offset {GetEnemySpawnOffset()}, attackRange={attackRange}");
     }
@@ -635,6 +651,8 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
     private void SetupSpawnedEnemy(AutoBattleUnit enemy, MonsterData monster)
     {
         enemy.ApplyMonsterData(monster);
+        currentEnemyBaseScale = GetMonsterBaseScale(monster);
+        enemy.transform.localScale = currentEnemyBaseScale;
         enemy.transform.position = CalculateEnemySpawnPosition(monster);
 
         if (monster != null)
@@ -642,7 +660,21 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
             enemy.transform.rotation = Quaternion.Euler(monster.SpawnRotation);
         }
 
-        enemy.name = (monster != null ? monster.MonsterName : "Enemy") + "_" + Time.frameCount;
+        if (currentEnemyIsBoss && stageManager != null)
+        {
+            enemy.ApplyRuntimeBattleModifiers(
+                "BOSS",
+                stageManager.BossHealthMultiplier,
+                stageManager.BossAttackMultiplier,
+                stageManager.BossAttackIntervalMultiplier);
+            enemy.transform.localScale = currentEnemyBaseScale * stageManager.BossScaleMultiplier;
+        }
+        else
+        {
+            enemy.transform.localScale = currentEnemyBaseScale;
+        }
+
+        enemy.name = (monster != null ? monster.MonsterName : "Enemy") + (currentEnemyIsBoss ? "_Boss_" : "_") + Time.frameCount;
         enemy.ResetUnit();
         enemy.PlayIdle();
     }
@@ -652,10 +684,33 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
         Vector3 spawnPos = player.transform.position + Vector3.right * GetEnemySpawnOffset();
         if (monster != null)
         {
-            spawnPos += new Vector3(0f, monster.SpawnYOffset, monster.SpawnZOffset);
+            spawnPos.z += monster.SpawnZOffset;
+            if (currentEnemyIsBoss)
+            {
+                spawnPos.y += monster.BossSpawnYOffset;
+            }
+            else
+            {
+                spawnPos.y += monster.SpawnYOffset;
+            }
         }
 
         return spawnPos;
+    }
+
+    private Vector3 GetMonsterBaseScale(MonsterData monster)
+    {
+        if (monster != null && monster.Prefab != null)
+        {
+            return monster.Prefab.transform.localScale;
+        }
+
+        if (enemyTemplate != null)
+        {
+            return enemyTemplate.transform.localScale;
+        }
+
+        return Vector3.one;
     }
 
     private float GetEnemySpawnOffset()
@@ -685,17 +740,18 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
             return null;
         }
 
-        int totalWeight = CalculateTotalSpawnWeight();
+        int unlockedCount = GetUnlockedMonsterCount();
+        int totalWeight = CalculateTotalSpawnWeight(unlockedCount);
         if (totalWeight <= 0)
         {
             LogWarning("SelectMonster - totalWeight is 0. Using first valid monster.");
-            return GetFirstValidMonster();
+            return GetFirstValidMonster(unlockedCount);
         }
 
         int roll = Random.Range(0, totalWeight);
         Log($"SelectMonster roll={roll} (range: 0-{totalWeight - 1})");
 
-        for (int i = 0; i < monsters.Length; i++)
+        for (int i = 0; i < unlockedCount; i++)
         {
             var monster = monsters[i];
             if (monster == null || monster.Prefab == null)
@@ -712,17 +768,34 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
         }
 
         LogWarning("SelectMonster - no monster selected.");
-        return GetFirstValidMonster();
+        return GetFirstValidMonster(unlockedCount);
     }
 
-    private MonsterData GetFirstValidMonster()
+    private MonsterData SelectBossMonster()
+    {
+        if (monsters == null || monsters.Length == 0)
+        {
+            return null;
+        }
+
+        int bossIndex = stageManager != null ? stageManager.GetBossMonsterIndex(monsters.Length) : 0;
+        if (monsters[bossIndex] != null && monsters[bossIndex].Prefab != null)
+        {
+            return monsters[bossIndex];
+        }
+
+        return GetFirstValidMonster(GetUnlockedMonsterCount());
+    }
+
+    private MonsterData GetFirstValidMonster(int maxCount)
     {
         if (monsters == null)
         {
             return null;
         }
 
-        for (int i = 0; i < monsters.Length; i++)
+        int count = Mathf.Clamp(maxCount, 1, monsters.Length);
+        for (int i = 0; i < count; i++)
         {
             if (monsters[i] != null && monsters[i].Prefab != null)
             {
@@ -733,10 +806,11 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
         return null;
     }
 
-    private int CalculateTotalSpawnWeight()
+    private int CalculateTotalSpawnWeight(int maxCount)
     {
         int totalWeight = 0;
-        for (int i = 0; i < monsters.Length; i++)
+        int count = Mathf.Clamp(maxCount, 1, monsters.Length);
+        for (int i = 0; i < count; i++)
         {
             if (monsters[i] != null && monsters[i].Prefab != null)
             {
@@ -749,6 +823,16 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
 
         Log($"SelectMonster totalWeight={totalWeight}");
         return totalWeight;
+    }
+
+    private int GetUnlockedMonsterCount()
+    {
+        if (monsters == null || monsters.Length == 0)
+        {
+            return 0;
+        }
+
+        return stageManager != null ? stageManager.GetUnlockedMonsterCount(monsters.Length) : monsters.Length;
     }
 
     private void ReleaseCurrentEnemy()
@@ -768,6 +852,7 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
 
             currentEnemy = null;
             currentMonsterData = null;
+            currentEnemyIsBoss = false;
         }
 
         isAttackResolving = false;

@@ -15,6 +15,7 @@ public sealed class MonsterData : ScriptableObject
 
     [Header("Spawn Transform")]
     [SerializeField] private float spawnYOffset = 0f;
+    [SerializeField] private float bossSpawnYOffset = 0f;
     [SerializeField] private float spawnZOffset = 0f;
     [SerializeField] private Vector3 spawnRotation = Vector3.zero;
 
@@ -28,6 +29,7 @@ public sealed class MonsterData : ScriptableObject
     public int GoldReward => goldReward;
     public int SpawnWeight => Mathf.Max(0, spawnWeight);
     public float SpawnYOffset => spawnYOffset;
+    public float BossSpawnYOffset => bossSpawnYOffset;
     public float SpawnZOffset => spawnZOffset;
     public Vector3 SpawnRotation => spawnRotation;
 }

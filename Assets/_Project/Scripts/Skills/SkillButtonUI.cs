@@ -12,15 +12,16 @@ public sealed class SkillButtonUI : MonoBehaviour
     [SerializeField] private TMP_Text lockLevelText;
     [SerializeField] private Sprite lockSprite;
     [SerializeField] private Color lockTextColor = Color.white;
-    [SerializeField] private int lockTextFontSize = 12;
+    [SerializeField] private int lockTextFontSize = 14;
     [SerializeField] private Vector2 lockOverlayAnchorPadding = new Vector2(6f, 6f);
     [SerializeField] private Vector2 lockTextOffset;
-    [SerializeField] private float lockTextHeight = 22f;
+    [SerializeField] private float lockTextHeight = 24f;
     [SerializeField] private bool showLockLevelText = true;
     [SerializeField] private bool preserveLockSpriteAspect;
     [SerializeField] private bool createLockOverlayIfMissing = true;
 
     private SkillManager skillManager;
+    private SkillLoadoutUI skillLoadout;
 
     private void Awake()
     {
@@ -35,6 +36,7 @@ public sealed class SkillButtonUI : MonoBehaviour
     private void OnEnable()
     {
         ResolveManager();
+        ResolveLoadout();
         EnsureLockOverlay();
 
         if (button != null)
@@ -45,6 +47,11 @@ public sealed class SkillButtonUI : MonoBehaviour
         if (skillManager != null)
         {
             skillManager.SkillStateChanged += OnSkillStateChanged;
+        }
+
+        if (skillLoadout != null)
+        {
+            skillLoadout.LoadoutChanged += Refresh;
         }
 
         Refresh();
@@ -61,6 +68,11 @@ public sealed class SkillButtonUI : MonoBehaviour
         {
             skillManager.SkillStateChanged -= OnSkillStateChanged;
         }
+
+        if (skillLoadout != null)
+        {
+            skillLoadout.LoadoutChanged -= Refresh;
+        }
     }
 
     private void Update()
@@ -71,6 +83,16 @@ public sealed class SkillButtonUI : MonoBehaviour
     private void UseSkill()
     {
         ResolveManager();
+        ResolveLoadout();
+
+        SkillLoadoutUI assigningLoadout = SkillLoadoutUI.CurrentAssigningLoadout;
+        if (assigningLoadout != null && assigningLoadout.IsAssigning)
+        {
+            assigningLoadout.TryAssignSkill(skillType);
+            Refresh();
+            return;
+        }
+
         skillManager?.TryUseSkill(skillType);
         Refresh();
     }
@@ -86,15 +108,29 @@ public sealed class SkillButtonUI : MonoBehaviour
     public void Refresh()
     {
         ResolveManager();
+        ResolveLoadout();
+        SkillLoadoutUI assigningLoadout = SkillLoadoutUI.CurrentAssigningLoadout;
+        SkillLoadoutUI activeLoadout = assigningLoadout != null
+            ? assigningLoadout
+            : SkillLoadoutUI.ActiveLoadout != null
+                ? SkillLoadoutUI.ActiveLoadout
+                : skillLoadout;
 
         float remaining = skillManager != null ? skillManager.GetCooldownRemaining(skillType) : 0f;
         float duration = skillManager != null ? skillManager.GetCooldownDuration(skillType) : 0f;
         bool isCoolingDown = remaining > 0f;
-        bool isUnlocked = skillManager == null || skillManager.IsSkillUnlocked(skillType);
+        bool isUnlocked = skillManager != null && skillManager.IsSkillUnlocked(skillType);
+        bool isAssigning = assigningLoadout != null && assigningLoadout.IsAssigning;
+        bool isAlreadyAssigned = activeLoadout != null
+            && (isAssigning
+                ? activeLoadout.IsSkillAssignedToOtherSlot(skillType)
+                : activeLoadout.IsSkillAssigned(skillType));
 
         if (button != null)
         {
-            button.interactable = isUnlocked && !isCoolingDown;
+            button.interactable = isAssigning
+                ? isUnlocked && !isAlreadyAssigned
+                : isUnlocked && !isCoolingDown && !isAlreadyAssigned;
         }
 
         if (lockOverlay != null)
@@ -130,6 +166,14 @@ public sealed class SkillButtonUI : MonoBehaviour
         if (skillManager == null)
         {
             skillManager = DIContainer.Global.Resolve<SkillManager>();
+        }
+    }
+
+    private void ResolveLoadout()
+    {
+        if (skillLoadout == null)
+        {
+            skillLoadout = DIContainer.Global.Resolve<SkillLoadoutUI>();
         }
     }
 
@@ -176,8 +220,8 @@ public sealed class SkillButtonUI : MonoBehaviour
 
         var textRect = textObject.GetComponent<RectTransform>();
         textRect.anchorMin = new Vector2(0f, 0f);
-        textRect.anchorMax = new Vector2(1f, 0f);
-        textRect.pivot = new Vector2(0.5f, 0f);
+        textRect.anchorMax = new Vector2(1f, 1f);
+        textRect.pivot = new Vector2(0.5f, 1f);
         textRect.localScale = Vector3.one;
         textRect.anchoredPosition = lockTextOffset;
         textRect.sizeDelta = new Vector2(0f, lockTextHeight);

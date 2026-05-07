@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6fae64c24547b843831e35068ae83ce, type: 3}
+  m_Name: IceNecklace
+  m_EditorClassIdentifier: 
+  id: ice_necklace
+  displayName: Ice Necklace
+  icon: {fileID: 8438772726410788201, guid: 81f17edcb87ef594788913cf8cd921ce, type: 3}
+  slotType: 3
+  attackBonus: 0
+  healthBonus: 0
+  attackSpeedBonus: 0
+  critChanceBonus: 0
+  critDamageBonus: 0
+  goldBonus: 5
+  expBonus: 10

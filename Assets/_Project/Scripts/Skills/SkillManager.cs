@@ -5,16 +5,11 @@ using UnityEngine;
 
 public sealed class SkillManager : MonoBehaviour
 {
-    [SerializeField] private SkillData[] skills =
-    {
-        new SkillData { skillType = SkillType.SwordExplosion, effectType = SkillEffectType.Damage, displayName = "Sword Explosion", requiredLevel = 2, cooldown = 5f, damageMultiplier = 2.5f },
-        new SkillData { skillType = SkillType.GoldBurst, effectType = SkillEffectType.GoldBuff, displayName = "Gold Burst", requiredLevel = 3, cooldown = 20f, buffPercent = 50f, buffDuration = 8f },
-        new SkillData { skillType = SkillType.Heal, effectType = SkillEffectType.Heal, displayName = "Heal", requiredLevel = 4, cooldown = 12f, healPercent = 30f },
-        new SkillData { skillType = SkillType.MeteorRain, effectType = SkillEffectType.MeteorRain, displayName = "Meteor Rain", requiredLevel = 5, cooldown = 25f, damageMultiplier = 4f },
-    };
+    [SerializeField] private SkillData[] skills;
 
     private ISkillTargetProvider targetProvider;
     private ISkillVfxPlayer vfxPlayer;
+    private PlayerResources playerResources;
     private IEnemyDefeatHandler enemyDefeatHandler;
     private IAttackHitNotifier attackHitNotifier;
     private Coroutine goldBuffRoutine;
@@ -24,7 +19,7 @@ public sealed class SkillManager : MonoBehaviour
 
     public event Action<SkillType> SkillStateChanged;
 
-    public void Construct(ISkillTargetProvider targetProvider, ISkillVfxPlayer vfxPlayer)
+    public void Construct(ISkillTargetProvider targetProvider, ISkillVfxPlayer vfxPlayer, PlayerResources playerResources = null)
     {
         if (attackHitNotifier != null)
         {
@@ -33,6 +28,7 @@ public sealed class SkillManager : MonoBehaviour
 
         this.targetProvider = targetProvider;
         this.vfxPlayer = vfxPlayer;
+        this.playerResources = playerResources;
         enemyDefeatHandler = targetProvider as IEnemyDefeatHandler;
         attackHitNotifier = targetProvider as IAttackHitNotifier;
 
@@ -52,7 +48,6 @@ public sealed class SkillManager : MonoBehaviour
 
     private void Awake()
     {
-        EnsureDefaultRequiredLevels();
         runtimeCooldownRemaining = new float[skills != null ? skills.Length : 0];
         DIContainer.Global.Register(this);
     }
@@ -89,6 +84,11 @@ public sealed class SkillManager : MonoBehaviour
             return false;
         }
 
+        if (!TrySpendSkillCost(skill))
+        {
+            return false;
+        }
+
         ExecuteSkill(skill);
         runtimeCooldownRemaining[index] = Mathf.Max(0f, skill.cooldown);
         SkillStateChanged?.Invoke(skillType);
@@ -115,17 +115,33 @@ public sealed class SkillManager : MonoBehaviour
     public int GetRequiredLevel(SkillType skillType)
     {
         SkillData skill = GetSkill(skillType, out _);
-        return skill != null ? Mathf.Max(1, skill.requiredLevel) : 1;
+        if (skill == null)
+        {
+            return 1;
+        }
+
+        return skill.requiredLevel > 1 ? skill.requiredLevel : GetDefaultRequiredLevel(skill.skillType);
     }
 
     public int GetPlayerLevel()
     {
-        return targetProvider != null && targetProvider.Player != null ? targetProvider.Player.Level : 1;
+        if (targetProvider != null && targetProvider.Player != null)
+        {
+            return targetProvider.Player.Level;
+        }
+
+        AutoBattleUnit player = DIContainer.Global.Resolve<AutoBattleUnit>();
+        return player != null ? player.Level : 1;
     }
 
     public bool IsSkillUnlocked(SkillType skillType)
     {
         return GetPlayerLevel() >= GetRequiredLevel(skillType);
+    }
+
+    public SkillData GetSkillData(SkillType skillType)
+    {
+        return GetSkill(skillType, out _);
     }
 
     private bool CanUseSkill(SkillData skill)
@@ -152,6 +168,16 @@ public sealed class SkillManager : MonoBehaviour
                     && targetProvider.Player != null
                     && !targetProvider.Player.IsDead;
         }
+    }
+
+    private bool TrySpendSkillCost(SkillData skill)
+    {
+        if (skill == null || skill.manaCost <= 0f || playerResources == null)
+        {
+            return true;
+        }
+
+        return playerResources.TrySpendMana(skill.manaCost);
     }
 
     private void ExecuteSkill(SkillData skill)

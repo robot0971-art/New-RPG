@@ -27,6 +27,7 @@ public sealed class CoinDrop : MonoBehaviour
     public IObjectPool<GameObject> Pool { get; set; }
 
     private float groundY;
+    private Vector3 activeThrowOffset;
     private GameManager gameManager;
     private Coroutine activeSequence;
     private Collider2D[] colliders;
@@ -45,7 +46,13 @@ public sealed class CoinDrop : MonoBehaviour
 
     public void Play(Vector3 spawnPos, float groundY)
     {
+        Play(spawnPos, groundY, throwOffset);
+    }
+
+    public void Play(Vector3 spawnPos, float groundY, Vector3 throwOffsetOverride)
+    {
         this.groundY = groundY + groundYOffset;
+        activeThrowOffset = throwOffsetOverride;
         transform.position = spawnPos;
         SetSpinMultiplier(1f);
         gameManager = DIContainer.Global.Resolve<GameManager>() ?? GameManager.Instance;
@@ -68,9 +75,9 @@ public sealed class CoinDrop : MonoBehaviour
 
         // Phase 1: Throw from the monster position to the landing point.
         Vector3 groundPos = new Vector3(
-            spawnPos.x + throwOffset.x,
-            groundY + throwOffset.y,
-            spawnPos.z + throwOffset.z);
+            spawnPos.x + activeThrowOffset.x,
+            groundY + activeThrowOffset.y,
+            spawnPos.z + activeThrowOffset.z);
         yield return ArcMoveCoroutine(currentPos, groundPos, jumpHeight, jumpDuration);
         currentPos = groundPos;
 

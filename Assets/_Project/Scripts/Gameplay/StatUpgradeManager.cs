@@ -30,6 +30,8 @@ public sealed class StatUpgradeManager : MonoBehaviour, ISaveable
     };
 
     private GameManager gameManager;
+    private EquipmentManager equipmentManager;
+    private bool isSubscribedToEquipment;
 
     public event Action StatsChanged;
 
@@ -43,8 +45,24 @@ public sealed class StatUpgradeManager : MonoBehaviour, ISaveable
     private void Start()
     {
         ResolveReferences();
+        SubscribeToEquipment();
         ApplyToPlayer();
         StatsChanged?.Invoke();
+    }
+
+    private void OnEnable()
+    {
+        ResolveReferences();
+        SubscribeToEquipment();
+    }
+
+    private void OnDisable()
+    {
+        if (equipmentManager != null && isSubscribedToEquipment)
+        {
+            equipmentManager.EquipmentChanged -= OnEquipmentChanged;
+            isSubscribedToEquipment = false;
+        }
     }
 
     public StatUpgrade GetUpgrade(StatType statType)
@@ -175,13 +193,40 @@ public sealed class StatUpgradeManager : MonoBehaviour, ISaveable
         }
 
         player.ApplyStatUpgrades(
-            GetValue(StatType.Attack),
-            GetValue(StatType.AttackSpeed),
-            GetValue(StatType.Health),
-            GetValue(StatType.CritChance),
-            GetValue(StatType.CritDamage),
-            GetValue(StatType.GoldBonus),
-            GetValue(StatType.ExpBonus));
+            GetValue(StatType.Attack) + GetEquipmentBonus(StatType.Attack),
+            GetValue(StatType.AttackSpeed) + GetEquipmentBonus(StatType.AttackSpeed),
+            GetValue(StatType.Health) + GetEquipmentBonus(StatType.Health),
+            GetValue(StatType.CritChance) + GetEquipmentBonus(StatType.CritChance),
+            GetValue(StatType.CritDamage) + GetEquipmentBonus(StatType.CritDamage),
+            GetValue(StatType.GoldBonus) + GetEquipmentBonus(StatType.GoldBonus),
+            GetValue(StatType.ExpBonus) + GetEquipmentBonus(StatType.ExpBonus));
+    }
+
+    private float GetEquipmentBonus(StatType statType)
+    {
+        ResolveReferences();
+        if (equipmentManager == null)
+        {
+            return 0f;
+        }
+
+        return statType switch
+        {
+            StatType.Attack => equipmentManager.GetAttackBonus(),
+            StatType.AttackSpeed => equipmentManager.GetAttackSpeedBonus(),
+            StatType.Health => equipmentManager.GetHealthBonus(),
+            StatType.CritChance => equipmentManager.GetCritChanceBonus(),
+            StatType.CritDamage => equipmentManager.GetCritDamageBonus(),
+            StatType.GoldBonus => equipmentManager.GetGoldBonus(),
+            StatType.ExpBonus => equipmentManager.GetExpBonus(),
+            _ => 0f
+        };
+    }
+
+    private void OnEquipmentChanged()
+    {
+        ApplyToPlayer();
+        StatsChanged?.Invoke();
     }
 
     private void ResolveReferences()
@@ -200,5 +245,21 @@ public sealed class StatUpgradeManager : MonoBehaviour, ISaveable
         {
             gameManager = DIContainer.Global.Resolve<GameManager>() ?? GameManager.Instance;
         }
+
+        if (equipmentManager == null)
+        {
+            equipmentManager = DIContainer.Global.Resolve<EquipmentManager>();
+        }
+    }
+
+    private void SubscribeToEquipment()
+    {
+        if (equipmentManager == null || isSubscribedToEquipment)
+        {
+            return;
+        }
+
+        equipmentManager.EquipmentChanged += OnEquipmentChanged;
+        isSubscribedToEquipment = true;
     }
 }

@@ -10,6 +10,7 @@ public sealed class GameLifetimeScope : MonoBehaviour
     [SerializeField] private SaveManager saveManager;
     [SerializeField] private SkillManager skillManager;
     [SerializeField] private SkillVfxPlayer skillVfxPlayer;
+    [SerializeField] private PlayerResources playerResources;
 
     private void Awake()
     {
@@ -64,6 +65,11 @@ public sealed class GameLifetimeScope : MonoBehaviour
         {
             skillVfxPlayer = Object.FindFirstObjectByType<SkillVfxPlayer>();
         }
+
+        if (playerResources == null)
+        {
+            playerResources = Object.FindFirstObjectByType<PlayerResources>();
+        }
     }
 
     private void RegisterSceneReferences()
@@ -101,6 +107,11 @@ public sealed class GameLifetimeScope : MonoBehaviour
         if (skillVfxPlayer != null)
         {
             DIContainer.Global.Register(skillVfxPlayer);
+        }
+
+        if (playerResources != null)
+        {
+            DIContainer.Global.Register(playerResources);
         }
     }
 
@@ -151,7 +162,7 @@ public sealed class GameLifetimeScope : MonoBehaviour
             return;
         }
 
-        skillManager.Construct(battleController, skillVfxPlayer);
+        skillManager.Construct(battleController, skillVfxPlayer, playerResources);
     }
 
     private static ISaveable[] FindSaveablesInScene()

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920fd2ea24087af438e4a5010d7565c0, type: 3}
+  m_Name: MeteorRain
+  m_EditorClassIdentifier: 
+  skillType: 3
+  effectType: 3
+  displayName: Meteor Rain
+  icon: {fileID: -4760390527554420087, guid: 47156037ad770e442845bf630d6e6dae, type: 3}
+  requiredLevel: 5
+  manaCost: 10
+  cooldown: 25
+  damageMultiplier: 4
+  healPercent: 30
+  buffPercent: 50
+  buffDuration: 8
+  vfxPrefab: {fileID: 7778943246706728140, guid: 00260be0f7075a743914b2e97eee1aea, type: 3}
+  secondaryVfxPrefab: {fileID: 40326310022949883, guid: b5d5dc62adbc4b746b1310de1ce34492, type: 3}
+  vfxOffset: {x: 0, y: 0, z: 2.12}
+  vfxScale: {x: 1, y: 1, z: 1}
+  vfxReleaseDelay: 3
+  meteorStartOffset: {x: 0, y: 5, z: 0}
+  meteorFallDuration: 0.7
+  meteorCount: 7
+  meteorInterval: 0.15
+  meteorRadius: 1.2

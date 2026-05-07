@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public sealed class SkillWindowUI : MonoBehaviour
+public sealed class SkillWindowUI : MonoBehaviour, IGameplayWindow
 {
     [SerializeField] private GameObject windowRoot;
     [SerializeField] private Button openButton;
@@ -9,6 +9,8 @@ public sealed class SkillWindowUI : MonoBehaviour
     [SerializeField] private Button toggleButton;
     [SerializeField] private SkillButtonUI[] skillButtons;
     [SerializeField] private bool openOnAwake = true;
+
+    public bool IsOpen => windowRoot != null && windowRoot.activeInHierarchy;
 
     private void Awake()
     {
@@ -18,8 +20,21 @@ public sealed class SkillWindowUI : MonoBehaviour
         }
 
         CacheSkillButtons();
+        GameplayWindowManager.Register(this);
 
-        SetVisible(openOnAwake);
+        if (openOnAwake)
+        {
+            Open();
+        }
+        else
+        {
+            SetVisible(false);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        GameplayWindowManager.Unregister(this);
     }
 
     private void OnEnable()
@@ -35,6 +50,7 @@ public sealed class SkillWindowUI : MonoBehaviour
 
     public void Open()
     {
+        GameplayWindowManager.OpenExclusive(this);
         SetVisible(true);
         Refresh();
     }
@@ -46,13 +62,13 @@ public sealed class SkillWindowUI : MonoBehaviour
 
     public void Toggle()
     {
-        bool isVisible = windowRoot != null && windowRoot.activeSelf;
-        SetVisible(!isVisible);
-
-        if (!isVisible)
+        if (IsOpen)
         {
-            Refresh();
+            Close();
+            return;
         }
+
+        Open();
     }
 
     public void Refresh()

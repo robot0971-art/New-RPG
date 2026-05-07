@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920fd2ea24087af438e4a5010d7565c0, type: 3}
+  m_Name: Heal
+  m_EditorClassIdentifier: 
+  skillType: 2
+  effectType: 2
+  displayName: Heal
+  icon: {fileID: 3585448899117464591, guid: 47156037ad770e442845bf630d6e6dae, type: 3}
+  requiredLevel: 4
+  manaCost: 10
+  cooldown: 12
+  damageMultiplier: 2
+  healPercent: 30
+  buffPercent: 50
+  buffDuration: 8
+  vfxPrefab: {fileID: 4857272986598761812, guid: 94f7073616352ce40a77a26998ba2d7d, type: 3}
+  secondaryVfxPrefab: {fileID: 0}
+  vfxOffset: {x: 0, y: 0, z: 0}
+  vfxScale: {x: 1, y: 1, z: 1}
+  vfxReleaseDelay: 2
+  meteorStartOffset: {x: 0, y: 5, z: 0}
+  meteorFallDuration: 0.7
+  meteorCount: 5
+  meteorInterval: 0.15
+  meteorRadius: 1.2

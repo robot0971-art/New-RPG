@@ -1,9 +1,11 @@
 using UnityEngine;
 
-public sealed class StatUpgradeWindowUI : MonoBehaviour
+public sealed class StatUpgradeWindowUI : MonoBehaviour, IGameplayWindow
 {
     [SerializeField] private GameObject windowRoot;
     [SerializeField] private StatUpgradePanelUI[] panels;
+
+    public bool IsOpen => windowRoot != null && windowRoot.activeInHierarchy;
 
     private void Awake()
     {
@@ -16,6 +18,13 @@ public sealed class StatUpgradeWindowUI : MonoBehaviour
         {
             panels = GetComponentsInChildren<StatUpgradePanelUI>(true);
         }
+
+        GameplayWindowManager.Register(this);
+    }
+
+    private void OnDestroy()
+    {
+        GameplayWindowManager.Unregister(this);
     }
 
     private void OnEnable()
@@ -25,7 +34,9 @@ public sealed class StatUpgradeWindowUI : MonoBehaviour
 
     public void Open()
     {
+        GameplayWindowManager.OpenExclusive(this);
         SetVisible(true);
+        Refresh();
     }
 
     public void Close()
@@ -35,7 +46,13 @@ public sealed class StatUpgradeWindowUI : MonoBehaviour
 
     public void Toggle()
     {
-        SetVisible(windowRoot == null || !windowRoot.activeSelf);
+        if (IsOpen)
+        {
+            Close();
+            return;
+        }
+
+        Open();
     }
 
     public void Refresh()

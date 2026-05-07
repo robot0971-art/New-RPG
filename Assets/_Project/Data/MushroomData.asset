@@ -21,3 +21,7 @@ MonoBehaviour:
   expReward: 5
   goldReward: 10
   spawnWeight: 1
+  spawnYOffset: 0
+  bossSpawnYOffset: 5
+  spawnZOffset: 0
+  spawnRotation: {x: 0, y: 0, z: 0}
