@@ -22,10 +22,7 @@ public sealed class TogglePanelButton : MonoBehaviour
         if (button != null)
         {
             button.onClick.RemoveListener(Toggle);
-            if (button.onClick.GetPersistentEventCount() == 0)
-            {
-                button.onClick.AddListener(Toggle);
-            }
+            button.onClick.AddListener(Toggle);
         }
     }
 

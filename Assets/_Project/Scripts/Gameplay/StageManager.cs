@@ -1,4 +1,5 @@
 using TMPro;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,15 +20,20 @@ public sealed class StageManager : MonoBehaviour, ISaveable
     [SerializeField] private TMP_Text stageText;
     [SerializeField] private Button bossButton;
     [SerializeField] private GameObject bossLockedVisual;
+    [SerializeField] private StageTransitionUI stageTransitionUI;
+    [SerializeField, Min(0f)] private float bossClearRewardDelay = 1.25f;
 
     private AutoBattleController battleController;
     private int normalKillCount;
     private bool bossAvailable;
     private bool bossBattleActive;
+    private bool isTransitioning;
+    private Coroutine transitionRoutine;
 
     public int CurrentStage => Mathf.Max(1, currentStage);
     public bool BossAvailable => !bossBattleActive && (bossAvailable || normalKillsRequiredForBoss <= 0);
     public bool BossBattleActive => bossBattleActive;
+    public bool IsTransitioning => isTransitioning;
     public float BossHealthMultiplier => bossHealthMultiplier;
     public float BossAttackMultiplier => bossAttackMultiplier;
     public float BossAttackIntervalMultiplier => bossAttackIntervalMultiplier;
@@ -144,12 +150,40 @@ public sealed class StageManager : MonoBehaviour, ISaveable
 
     private void CompleteBossBattle()
     {
+        if (transitionRoutine != null)
+        {
+            return;
+        }
+
+        transitionRoutine = StartCoroutine(CompleteBossBattleRoutine());
+    }
+
+    private IEnumerator CompleteBossBattleRoutine()
+    {
+        isTransitioning = true;
         bossBattleActive = false;
         bossAvailable = false;
         normalKillCount = 0;
         currentStage = CurrentStage + 1;
         RefreshUI();
+        ResolveReferences();
+        battleController?.SetPlayerIdle();
+
+        if (bossClearRewardDelay > 0f)
+        {
+            yield return new WaitForSeconds(bossClearRewardDelay);
+        }
+
+        if (stageTransitionUI != null)
+        {
+            yield return stageTransitionUI.PlayStageTransition(CurrentStage);
+        }
+
+        RefreshUI();
         SaveEvents.RequestSave();
+
+        isTransitioning = false;
+        transitionRoutine = null;
     }
 
     private void RefreshUI()

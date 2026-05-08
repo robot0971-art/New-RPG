@@ -20,6 +20,7 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
     [SerializeField] private float impactStartSizeMultiplier = 1.0f;
     [SerializeField] private int impactSortingOrder = 10;
     [SerializeField] private float impactReleaseDelay = 1.0f;
+    [SerializeField] private DamagePopupSpawner damagePopupSpawner;
 
     [Header("Rewards")]
     [SerializeField] private CoinDropRewardSpawner coinRewardSpawner;
@@ -75,6 +76,19 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
         enemyRespawnTimer = 0f;
         SpawnEnemy();
         return currentEnemy != null && currentEnemyIsBoss;
+    }
+
+    public void SetPlayerIdle()
+    {
+        if (player == null)
+        {
+            TryResolveDependencies();
+        }
+
+        if (player != null && !player.IsDead)
+        {
+            player.PlayIdle();
+        }
     }
 
     public void GetEnemiesInRadius(Vector3 position, float radius, List<AutoBattleUnit> results)
@@ -173,6 +187,7 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
     {
         return gameManager != null
             && gameManager.State == GameState.Playing
+            && (stageManager == null || !stageManager.IsTransitioning)
             && player != null
             && !player.IsDead;
     }
@@ -357,6 +372,11 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
         {
             parallaxBackground = FindFirstObjectByType<ParallaxBackground2D>();
         }
+
+        if (damagePopupSpawner == null)
+        {
+            damagePopupSpawner = FindFirstObjectByType<DamagePopupSpawner>();
+        }
     }
 
     private IEnumerator ResolvePlayerAttack()
@@ -422,7 +442,12 @@ public sealed class AutoBattleController : MonoBehaviour, ISkillTargetProvider, 
             return;
         }
 
-        player.Attack(currentEnemy);
+        AutoBattleUnit.DamageResult damageResult = player.Attack(currentEnemy);
+        if (damagePopupSpawner != null && damageResult.Amount > 0f)
+        {
+            damagePopupSpawner.ShowDamage(damageResult.Amount, damageResult.IsCritical, currentEnemy.transform.position);
+        }
+
         PlayImpactEffect(currentEnemy.transform.position + impactOffset);
 
         if (currentEnemy.IsDead)

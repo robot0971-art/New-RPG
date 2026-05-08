@@ -357,6 +357,7 @@ Material:
     - _PingPongGlowContrast: 1
     - _PingPongGlowFade: 1
     - _PingPongGlowFrequency: 3
+    - _PixelOutlineAlphaLimit: 0.5
     - _PixelOutlineFade: 1
     - _PixelOutlineOutlineOnlyToggle: 0
     - _PixelOutlineTextureToggle: 0
@@ -385,6 +386,7 @@ Material:
     - _RecolorRGBYCPTextureToggle: 0
     - _RectHeight: 100
     - _RectWidth: 100
+    - _ResizableTexture: 0
     - _Saturation: 1
     - _ScreenTilingPixelsPerUnit: 100
     - _ScreenWidthUnits: 10
@@ -656,3 +658,4 @@ Material:
     - _WorldTilingOffset: {r: 0, g: 0, b: 0, a: 0}
     - _WorldTilingScale: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

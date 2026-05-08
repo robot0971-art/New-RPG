@@ -308,26 +308,44 @@ public sealed class AutoBattleUnit : MonoBehaviour, ISaveable
         hitLockRoutine = StartCoroutine(LockHitAnimation());
     }
 
-    public void Attack(AutoBattleUnit target)
+    public DamageResult Attack(AutoBattleUnit target)
     {
         if (target == null || IsDead)
         {
-            return;
+            return DamageResult.None;
         }
 
         PlayAttack();
-        target.TakeDamage(GetAttackDamage());
+        DamageResult damageResult = GetAttackDamage();
+        target.TakeDamage(damageResult.Amount);
+        return damageResult;
     }
 
-    private float GetAttackDamage()
+    private DamageResult GetAttackDamage()
     {
         float damage = attackPower;
+        bool isCritical = false;
         if (CritChancePercent > 0f && UnityEngine.Random.value <= CritChancePercent / 100f)
         {
             damage *= CritDamagePercent / 100f;
+            isCritical = true;
         }
 
-        return damage;
+        return new DamageResult(damage, isCritical);
+    }
+
+    public struct DamageResult
+    {
+        public static readonly DamageResult None = new DamageResult(0f, false);
+
+        public DamageResult(float amount, bool isCritical)
+        {
+            Amount = amount;
+            IsCritical = isCritical;
+        }
+
+        public float Amount { get; }
+        public bool IsCritical { get; }
     }
 
     public void OnAttackHit()
