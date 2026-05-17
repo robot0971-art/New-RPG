@@ -11,28 +11,55 @@ public sealed class DIContainer
 
     public void Register<T>(T instance)
     {
-        if (instance == null) return;
-        var type = typeof(T);
-        registry[type] = instance;
+        if (instance == null)
+        {
+            return;
+        }
+
+        registry[typeof(T)] = instance;
     }
 
-    public T Resolve<T>() where T : UnityEngine.Object
+    public bool TryResolve<T>(out T value)
     {
         var type = typeof(T);
-        if (registry.TryGetValue(type, out var instance) && instance != null)
+        if (registry.TryGetValue(type, out var instance) && instance is T typedInstance)
         {
-            return (T)instance;
+            value = typedInstance;
+            return true;
         }
 
-        // 만약 등록되어 있지 않다면 씬에서 직접 찾아서 등록 시도 (순서 문제 해결)
-        var found = UnityEngine.Object.FindFirstObjectByType<T>();
-        if (found != null)
+        foreach (var registeredInstance in registry.Values)
         {
-            Register(found);
-            return found;
+            if (registeredInstance is T assignableInstance)
+            {
+                value = assignableInstance;
+                return true;
+            }
         }
 
-        Debug.LogWarning($"[DIContainer] Could not find or resolve type: {type.Name}");
+        if (typeof(UnityEngine.Object).IsAssignableFrom(type))
+        {
+            var found = UnityEngine.Object.FindFirstObjectByType(type);
+            if (found is T foundTyped)
+            {
+                Register(foundTyped);
+                value = foundTyped;
+                return true;
+            }
+        }
+
+        value = default;
+        return false;
+    }
+
+    public T Resolve<T>()
+    {
+        if (TryResolve(out T value))
+        {
+            return value;
+        }
+
+        Debug.LogWarning($"[DIContainer] Could not find or resolve type: {typeof(T).Name}");
         return default;
     }
 

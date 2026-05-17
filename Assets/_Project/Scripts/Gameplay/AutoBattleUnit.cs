@@ -8,6 +8,7 @@ public sealed class AutoBattleUnit : MonoBehaviour, ISaveable
     [SerializeField] private float maxHealth = 10f;
     [SerializeField] private float attackPower = 1f;
     [SerializeField] private float attackInterval = 1f;
+    [SerializeField] private LevelBalanceData levelBalance;
     [Header("Animation")]
     [SerializeField] private Animator animator;
     [SerializeField] private string idleStateName = "Idle";
@@ -16,6 +17,7 @@ public sealed class AutoBattleUnit : MonoBehaviour, ISaveable
     [SerializeField] private string hitStateName = "Hit";
     [SerializeField] private string deathStateName = "Death";
     [SerializeField] private float hitLockDuration = 0.4f;
+    [SerializeField] private bool debugAnimationLogs;
 
     public string UnitName => unitName;
     public float MaxHealth => maxHealth;
@@ -33,7 +35,7 @@ public sealed class AutoBattleUnit : MonoBehaviour, ISaveable
     // 성장 데이터
     public int Level { get; private set; } = 1;
     public float CurrentExp { get; private set; }
-    public float RequiredExp => Level * 10f; 
+    public float RequiredExp => GetRequiredExp(Level);
 
     public event Action<AutoBattleUnit> Damaged;
     public event Action<AutoBattleUnit> Died;
@@ -182,8 +184,8 @@ public sealed class AutoBattleUnit : MonoBehaviour, ISaveable
     {
         CurrentExp -= RequiredExp;
         Level++;
-        levelAttackBonus += 2f;
-        levelHealthBonus += 5f;
+        levelAttackBonus += GetAttackBonusPerLevel();
+        levelHealthBonus += GetHealthBonusPerLevel();
         RecalculateCombatStats(false);
         CurrentHealth = maxHealth;
         LevelChanged?.Invoke(Level);
@@ -225,8 +227,33 @@ public sealed class AutoBattleUnit : MonoBehaviour, ISaveable
     private void RecalculateLevelBonuses()
     {
         int bonusLevels = Mathf.Max(0, Level - 1);
-        levelAttackBonus = bonusLevels * 2f;
-        levelHealthBonus = bonusLevels * 5f;
+        levelAttackBonus = GetLevelAttackBonus(bonusLevels);
+        levelHealthBonus = GetLevelHealthBonus(bonusLevels);
+    }
+
+    private float GetRequiredExp(int level)
+    {
+        return levelBalance != null ? levelBalance.GetRequiredExp(level) : Mathf.Max(1f, Mathf.Max(1, level) * 10f);
+    }
+
+    private float GetAttackBonusPerLevel()
+    {
+        return levelBalance != null ? levelBalance.AttackBonusPerLevel : 2f;
+    }
+
+    private float GetHealthBonusPerLevel()
+    {
+        return levelBalance != null ? levelBalance.HealthBonusPerLevel : 5f;
+    }
+
+    private float GetLevelAttackBonus(int bonusLevels)
+    {
+        return levelBalance != null ? levelBalance.GetAttackBonus(bonusLevels) : Mathf.Max(0, bonusLevels) * 2f;
+    }
+
+    private float GetLevelHealthBonus(int bonusLevels)
+    {
+        return levelBalance != null ? levelBalance.GetHealthBonus(bonusLevels) : Mathf.Max(0, bonusLevels) * 5f;
     }
 
     private void RecalculateCombatStats(bool preserveHealthRatio)
@@ -377,9 +404,13 @@ public sealed class AutoBattleUnit : MonoBehaviour, ISaveable
             return true;
         }
 
-        var stateName = StateHashToName(stateHash);
-        var caller = new System.Diagnostics.StackTrace(1, false).GetFrame(0)?.GetMethod()?.Name ?? "?";
-        Debug.Log($"[Anim] {gameObject.name} → {stateName} (caller={caller}, forceRestart={forceRestart})");
+        if (debugAnimationLogs)
+        {
+            var stateName = StateHashToName(stateHash);
+            var caller = new System.Diagnostics.StackTrace(1, false).GetFrame(0)?.GetMethod()?.Name ?? "?";
+            Debug.Log($"[Anim] {gameObject.name} → {stateName} (caller={caller}, forceRestart={forceRestart})");
+        }
+
         animator.Play(stateHash, 0, 0f);
         currentAnimationHash = stateHash;
         return true;

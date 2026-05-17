@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public sealed class StageManager : MonoBehaviour, ISaveable
 {
     [Header("Stage")]
+    [SerializeField] private StageBalanceData stageBalance;
     [SerializeField] private int currentStage = 1;
     [Min(0)]
     [SerializeField] private int normalKillsRequiredForBoss = 10;
@@ -31,13 +32,15 @@ public sealed class StageManager : MonoBehaviour, ISaveable
     private Coroutine transitionRoutine;
 
     public int CurrentStage => Mathf.Max(1, currentStage);
-    public bool BossAvailable => !bossBattleActive && (bossAvailable || normalKillsRequiredForBoss <= 0);
+    public bool BossAvailable => !bossBattleActive && (bossAvailable || NormalKillsRequiredForBoss <= 0);
     public bool BossBattleActive => bossBattleActive;
     public bool IsTransitioning => isTransitioning;
-    public float BossHealthMultiplier => bossHealthMultiplier;
-    public float BossAttackMultiplier => bossAttackMultiplier;
-    public float BossAttackIntervalMultiplier => bossAttackIntervalMultiplier;
-    public float BossScaleMultiplier => bossScaleMultiplier;
+    public float BossHealthMultiplier => stageBalance != null ? stageBalance.BossHealthMultiplier : bossHealthMultiplier;
+    public float BossAttackMultiplier => stageBalance != null ? stageBalance.BossAttackMultiplier : bossAttackMultiplier;
+    public float BossAttackIntervalMultiplier => stageBalance != null ? stageBalance.BossAttackIntervalMultiplier : bossAttackIntervalMultiplier;
+    public float BossScaleMultiplier => stageBalance != null ? stageBalance.BossScaleMultiplier : bossScaleMultiplier;
+    private int NormalKillsRequiredForBoss => stageBalance != null ? stageBalance.NormalKillsRequiredForBoss : normalKillsRequiredForBoss;
+    private float BossClearRewardDelay => stageBalance != null ? stageBalance.BossClearRewardDelay : bossClearRewardDelay;
 
     private void Awake()
     {
@@ -65,6 +68,13 @@ public sealed class StageManager : MonoBehaviour, ISaveable
         {
             bossButton.onClick.RemoveListener(TryStartBossBattle);
         }
+
+        if (transitionRoutine != null)
+        {
+            StopCoroutine(transitionRoutine);
+            transitionRoutine = null;
+            isTransitioning = false;
+        }
     }
 
     public int GetUnlockedMonsterCount(int totalMonsterCount)
@@ -91,7 +101,7 @@ public sealed class StageManager : MonoBehaviour, ISaveable
         }
 
         normalKillCount++;
-        if (normalKillCount >= normalKillsRequiredForBoss)
+        if (normalKillCount >= NormalKillsRequiredForBoss)
         {
             bossAvailable = true;
         }
@@ -155,10 +165,19 @@ public sealed class StageManager : MonoBehaviour, ISaveable
             return;
         }
 
-        transitionRoutine = StartCoroutine(CompleteBossBattleRoutine());
+        ApplyBossBattleClearState();
+
+        if (!isActiveAndEnabled || !gameObject.activeInHierarchy)
+        {
+            isTransitioning = false;
+            SaveEvents.RequestSave();
+            return;
+        }
+
+        transitionRoutine = StartCoroutine(BossBattleClearPresentationRoutine());
     }
 
-    private IEnumerator CompleteBossBattleRoutine()
+    private void ApplyBossBattleClearState()
     {
         isTransitioning = true;
         bossBattleActive = false;
@@ -168,10 +187,13 @@ public sealed class StageManager : MonoBehaviour, ISaveable
         RefreshUI();
         ResolveReferences();
         battleController?.SetPlayerIdle();
+    }
 
-        if (bossClearRewardDelay > 0f)
+    private IEnumerator BossBattleClearPresentationRoutine()
+    {
+        if (BossClearRewardDelay > 0f)
         {
-            yield return new WaitForSeconds(bossClearRewardDelay);
+            yield return new WaitForSeconds(BossClearRewardDelay);
         }
 
         if (stageTransitionUI != null)

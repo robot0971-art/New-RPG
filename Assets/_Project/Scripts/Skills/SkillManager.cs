@@ -21,20 +21,35 @@ public sealed class SkillManager : MonoBehaviour
 
     public void Construct(ISkillTargetProvider targetProvider, ISkillVfxPlayer vfxPlayer, PlayerResources playerResources = null)
     {
-        if (attackHitNotifier != null)
+        Construct(
+            targetProvider,
+            targetProvider as IEnemyDefeatHandler,
+            targetProvider as IAttackHitNotifier,
+            vfxPlayer,
+            playerResources);
+    }
+
+    public void Construct(
+        ISkillTargetProvider targetProvider,
+        IEnemyDefeatHandler enemyDefeatHandler,
+        IAttackHitNotifier attackHitNotifier,
+        ISkillVfxPlayer vfxPlayer,
+        PlayerResources playerResources = null)
+    {
+        if (this.attackHitNotifier != null)
         {
-            attackHitNotifier.PlayerAttackResolved -= OnPlayerAttackResolved;
+            this.attackHitNotifier.PlayerAttackResolved -= OnPlayerAttackResolved;
         }
 
         this.targetProvider = targetProvider;
         this.vfxPlayer = vfxPlayer;
         this.playerResources = playerResources;
-        enemyDefeatHandler = targetProvider as IEnemyDefeatHandler;
-        attackHitNotifier = targetProvider as IAttackHitNotifier;
+        this.enemyDefeatHandler = enemyDefeatHandler;
+        this.attackHitNotifier = attackHitNotifier;
 
-        if (attackHitNotifier != null)
+        if (this.attackHitNotifier != null)
         {
-            attackHitNotifier.PlayerAttackResolved += OnPlayerAttackResolved;
+            this.attackHitNotifier.PlayerAttackResolved += OnPlayerAttackResolved;
         }
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 public sealed class AutoBattleSensor2D : MonoBehaviour
 {
     [SerializeField] private LayerMask targetLayers;
+    [SerializeField] private bool debugLogs;
 
     public AutoBattleUnit CurrentTarget { get; private set; }
 
@@ -20,23 +21,23 @@ public sealed class AutoBattleSensor2D : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"[Sensor] Object detected: {other.name} on layer {LayerMask.LayerToName(other.gameObject.layer)}");
+        Log($"Object detected: {other.name} on layer {LayerMask.LayerToName(other.gameObject.layer)}");
 
         if (!IsInTargetLayer(other.gameObject.layer))
         {
-            Debug.Log($"[Sensor] {other.name} is not in Target Layer mask.");
+            Log($"{other.name} is not in Target Layer mask.");
             return;
         }
 
         var target = other.GetComponent<AutoBattleUnit>();
         if (target == null)
         {
-            Debug.Log($"[Sensor] {other.name} does not have AutoBattleUnit component.");
+            Log($"{other.name} does not have AutoBattleUnit component.");
             return;
         }
 
         CurrentTarget = target;
-        Debug.Log($"<color=green>[Sensor] Target SET to {target.UnitName}</color>");
+        Log($"Target SET to {target.UnitName}");
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -57,5 +58,13 @@ public sealed class AutoBattleSensor2D : MonoBehaviour
     private bool IsInTargetLayer(int layer)
     {
         return (targetLayers.value & (1 << layer)) != 0;
+    }
+
+    private void Log(string message)
+    {
+        if (debugLogs)
+        {
+            Debug.Log($"[Sensor] {message}");
+        }
     }
 }

@@ -19543,6 +19543,7 @@ MonoBehaviour:
   skillManager: {fileID: 787519717}
   skillVfxPlayer: {fileID: 1758401630}
   playerResources: {fileID: 200854315}
+  debugLogs: 0
 --- !u!4 &1835130606
 Transform:
   m_ObjectHideFlags: 0
@@ -20873,6 +20874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c04ef0b5ab88e3d4b827a2ccc35b1d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageManager
+  stageBalance: {fileID: 11400000, guid: c57c77751b144d3d8beaa38326fb8f4f, type: 2}
   currentStage: 3
   normalKillsRequiredForBoss: 10
   bossHealthMultiplier: 12
@@ -21259,6 +21261,7 @@ MonoBehaviour:
   impactSortingOrder: 10
   impactReleaseDelay: 0.5
   damagePopupSpawner: {fileID: 933889468}
+  rewardBalance: {fileID: 11400000, guid: 4969ff003ed649ff82f0f24a79473440, type: 2}
   coinRewardSpawner: {fileID: 1983589702}
   coinDropOffset: {x: 0, y: 1, z: 0}
   attackImpactDelay: 0.2

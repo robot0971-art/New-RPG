@@ -11,6 +11,7 @@ public sealed class GameLifetimeScope : MonoBehaviour
     [SerializeField] private SkillManager skillManager;
     [SerializeField] private SkillVfxPlayer skillVfxPlayer;
     [SerializeField] private PlayerResources playerResources;
+    [SerializeField] private bool debugLogs;
 
     private void Awake()
     {
@@ -26,93 +27,37 @@ public sealed class GameLifetimeScope : MonoBehaviour
             player = GameObject.FindWithTag("Player")?.GetComponent<AutoBattleUnit>();
         }
 
-        if (player == null)
-        {
-            player = Object.FindFirstObjectByType<AutoBattleUnit>();
-        }
-
-        if (backgroundScroller == null)
-        {
-            backgroundScroller = Object.FindFirstObjectByType<BackgroundScroller>();
-        }
-
-        if (playerSensor == null)
-        {
-            playerSensor = Object.FindFirstObjectByType<AutoBattleSensor2D>();
-        }
-
-        if (battleController == null)
-        {
-            battleController = Object.FindFirstObjectByType<AutoBattleController>();
-        }
-
-        if (statUpgradeManager == null)
-        {
-            statUpgradeManager = Object.FindFirstObjectByType<StatUpgradeManager>();
-        }
-
-        if (saveManager == null)
-        {
-            saveManager = Object.FindFirstObjectByType<SaveManager>();
-        }
-
-        if (skillManager == null)
-        {
-            skillManager = Object.FindFirstObjectByType<SkillManager>();
-        }
-
-        if (skillVfxPlayer == null)
-        {
-            skillVfxPlayer = Object.FindFirstObjectByType<SkillVfxPlayer>();
-        }
-
-        if (playerResources == null)
-        {
-            playerResources = Object.FindFirstObjectByType<PlayerResources>();
-        }
+        ResolveSceneReference(ref player);
+        ResolveSceneReference(ref backgroundScroller);
+        ResolveSceneReference(ref playerSensor);
+        ResolveSceneReference(ref battleController);
+        ResolveSceneReference(ref statUpgradeManager);
+        ResolveSceneReference(ref saveManager);
+        ResolveSceneReference(ref skillManager);
+        ResolveSceneReference(ref skillVfxPlayer);
+        ResolveSceneReference(ref playerResources);
     }
 
     private void RegisterSceneReferences()
     {
-        if (player != null)
+        Register(player);
+
+        if (battleController != null)
         {
-            DIContainer.Global.Register(player);
+            Register(battleController);
+            Register<ISkillTargetProvider>(battleController);
+            Register<IEnemyDefeatHandler>(battleController);
+            Register<IAttackHitNotifier>(battleController);
         }
 
-        if (playerSensor != null)
-        {
-            DIContainer.Global.Register(playerSensor);
-        }
-
-        if (backgroundScroller != null)
-        {
-            DIContainer.Global.Register(backgroundScroller);
-        }
-
-        if (statUpgradeManager != null)
-        {
-            DIContainer.Global.Register(statUpgradeManager);
-        }
-
-        if (saveManager != null)
-        {
-            DIContainer.Global.Register(saveManager);
-        }
-
-        if (skillManager != null)
-        {
-            DIContainer.Global.Register(skillManager);
-        }
-
-        if (skillVfxPlayer != null)
-        {
-            DIContainer.Global.Register(skillVfxPlayer);
-        }
-
-        if (playerResources != null)
-        {
-            DIContainer.Global.Register(playerResources);
-        }
+        Register(playerSensor);
+        Register(backgroundScroller);
+        Register(statUpgradeManager);
+        Register(saveManager);
+        Register(skillManager);
+        Register(skillVfxPlayer);
+        Register<ISkillVfxPlayer>(skillVfxPlayer);
+        Register(playerResources);
     }
 
     private void InjectDependencies()
@@ -129,10 +74,10 @@ public sealed class GameLifetimeScope : MonoBehaviour
             return;
         }
 
-        var resolvedPlayer = DIContainer.Global.Resolve<AutoBattleUnit>();
-        var resolvedBackgroundScroller = DIContainer.Global.Resolve<BackgroundScroller>();
-        var resolvedPlayerSensor = DIContainer.Global.Resolve<AutoBattleSensor2D>();
-        var resolvedGameManager = DIContainer.Global.Resolve<GameManager>();
+        DIContainer.Global.TryResolve(out AutoBattleUnit resolvedPlayer);
+        DIContainer.Global.TryResolve(out BackgroundScroller resolvedBackgroundScroller);
+        DIContainer.Global.TryResolve(out AutoBattleSensor2D resolvedPlayerSensor);
+        DIContainer.Global.TryResolve(out GameManager resolvedGameManager);
 
         battleController.Construct(
             resolvedPlayer,
@@ -140,7 +85,10 @@ public sealed class GameLifetimeScope : MonoBehaviour
             resolvedPlayerSensor,
             resolvedGameManager);
 
-        Debug.Log($"[GameDI] Battle injection - P:{resolvedPlayer != null}, BS:{resolvedBackgroundScroller != null}, PS:{resolvedPlayerSensor != null}, GM:{resolvedGameManager != null}");
+        if (debugLogs)
+        {
+            Debug.Log($"[GameDI] Battle injection - P:{resolvedPlayer != null}, BS:{resolvedBackgroundScroller != null}, PS:{resolvedPlayerSensor != null}, GM:{resolvedGameManager != null}");
+        }
     }
 
     private void InjectSaveManager()
@@ -162,7 +110,28 @@ public sealed class GameLifetimeScope : MonoBehaviour
             return;
         }
 
-        skillManager.Construct(battleController, skillVfxPlayer, playerResources);
+        DIContainer.Global.TryResolve(out ISkillTargetProvider targetProvider);
+        DIContainer.Global.TryResolve(out IEnemyDefeatHandler enemyDefeatHandler);
+        DIContainer.Global.TryResolve(out IAttackHitNotifier attackHitNotifier);
+        DIContainer.Global.TryResolve(out ISkillVfxPlayer resolvedVfxPlayer);
+
+        skillManager.Construct(targetProvider, enemyDefeatHandler, attackHitNotifier, resolvedVfxPlayer, playerResources);
+    }
+
+    private static void ResolveSceneReference<T>(ref T reference) where T : Object
+    {
+        if (reference == null)
+        {
+            reference = Object.FindFirstObjectByType<T>();
+        }
+    }
+
+    private static void Register<T>(T instance)
+    {
+        if (instance != null)
+        {
+            DIContainer.Global.Register(instance);
+        }
     }
 
     private static ISaveable[] FindSaveablesInScene()
